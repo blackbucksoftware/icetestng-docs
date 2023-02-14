@@ -1,6 +1,6 @@
 {
   "label": "API",
-  "position": 4,
+  "position": 5,
   "link": {
     "type": "generated-index",
     "description": "Learn about the available endpoints of the IceTestNG REST API and how to use them.",

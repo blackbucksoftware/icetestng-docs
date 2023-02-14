@@ -1,0 +1,9 @@
+{
+    "label": "Custom Tests",
+    "position": 4,
+    "link": {
+      "type": "generated-index",
+      "description": "This sections explains how you can define your own custom tests and combination rankings.",
+    }
+  }
+  
