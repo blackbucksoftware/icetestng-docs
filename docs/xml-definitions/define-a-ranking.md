@@ -20,7 +20,7 @@ In IceTest NG, a "Derived Result" is any result that is **automatically calculat
 
 Just like tests, Derived Results can be added either from an official test catalog (provided by FEIF or a national association) or from a custom XML file prepared by the user.
 
-In order to add a Derived Result, go to the [Tests](testList.cfm) page and click the competition name in the bread crumb menu on the top of the list to open the Competition Setup popup. 
+In order to add a Derived Result, go to the **Tests** page and click the competition name in the bread crumb menu on the top of the list to open the Competition Setup popup. 
 
 1. Go to the **Derived Results** tab.
 2. The left column shows the available Derived Results.
@@ -32,7 +32,7 @@ See section [XML description](#xml) for details on building your own custom Deri
 
 ## Working with Derived Results
 
-Once a Derived Result has been added to the competition, it will be listed on the [Tests](testList.cfm) page. Unlike the regular tests, it will feature only a results (flag) icon.
+Once a Derived Result has been added to the competition, it will be listed on the **Tests** page. Unlike the regular tests, it will feature only a results (flag) icon.
 
 Derived Results are updated automatically. Every time a result is entered for a test that is counting towards a Dervied Result, the calculation will be updated both in IceTestNG and on the ticker website.
 
@@ -41,7 +41,7 @@ If a competition makes use of age classes, Derived Results will feature separate
 
 ## Defining custom Derived Results <a name="xml"></a>
 
-Users can create their own Derived Results as part of an XML file that can be imported via the [Import Local Tests](localCatalog.cfm) page.
+Users can create their own Derived Results as part of an XML file that can be imported via the **Import Local Tests** page.
 
 The general structure of such a file is as follows:
 
