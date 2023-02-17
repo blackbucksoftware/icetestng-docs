@@ -9,7 +9,7 @@ const projectName = "icetestng-docs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "IceTestNG Documentation",
+  title: "IceTest NG Documentation",
   tagline: "Icelandic Horse Competition Software",
   url: `https://${organizationName}.github.io`,
   baseUrl: `/${projectName}/`,
@@ -56,9 +56,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "IceTestNG",
+        title: "IceTest NG",
         logo: {
-          alt: "IceTestNG Logo",
+          alt: "IceTest NG Logo",
           src: "img/logo-ng.svg",
         },
         items: [

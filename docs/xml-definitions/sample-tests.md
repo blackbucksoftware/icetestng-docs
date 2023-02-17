@@ -2,10 +2,10 @@
 sidebar_position: 2
 ---
 
-# Test Examples
+# Custom Tests: Examples
 
 This page features **real-world examples** of custom tests used by organizers in various countries.
-You can examine the XML used for test definition, and even download the complete XML file to modify it or import it into your own IceTestNG competition.
+You can examine the XML used for test definition, and even download the complete XML file to modify it or import it into your own IceTest NG competition.
 
 
 :::tip Test your tests
@@ -20,6 +20,10 @@ It's recommended to try out custom test definitions on the demo system first bef
 This test is used by competitions on ice. It uses only tölt, trot, and pace as sections. At the same time, the number of finalists is increased to 7. There is no choice of rein, and the default group size for the PREL round is 4.
 
 ```jsx title="davos2023.xml"
+<!--
+  Note: This is only an excerpt, not the full file.
+  You can download the complete file below.
+!-->
 <tests>
   <data:test id="XF1">
     <testCode>XF1</testCode>
@@ -106,6 +110,10 @@ You can download the full XML file here: [davos2023.xml](/xml/davos2023.xml).
 Similiar to Fivegait on Ice, this test definition is limited to slow tölt, trot, and medium to fast speed tölt. There are 7 finalists, no choice of rein, and the default group size for the PREL round is 4.
 
 ```jsx title="davos2023.xml"
+<!--
+  Note: This is only an excerpt, not the full file.
+  You can download the complete file below.
+!-->
 <tests>
   <data:test id="XV1">
     <testCode>XV1</testCode>
