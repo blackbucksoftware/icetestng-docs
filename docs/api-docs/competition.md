@@ -7,6 +7,22 @@ sidebar_position: 2
 GET = 'view',
 				PUT = 'save',
 				POST = 'create'
+## Create competition
+
+```jsx title="POST /competition" showLineNumbers
+{
+	"competitionId": "9ffa0058-35bf-433a-9d4db9cbffd54e52",
+	"nguser": "john.doe",
+    "ngpass": "secretPassword",
+	"sandbox": true
+}
+```
+
+```jsx title="Expected result"
+{
+	"TOKEN": "2KSZsnUN0jTOyCHj8M0/5w=="
+}
+```
 
 
 
