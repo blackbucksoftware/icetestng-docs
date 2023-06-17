@@ -54,8 +54,4 @@ The user who is requesting the new token needs to have EventAdmin permissions fo
 }
 ```
 
-## /latest
-
-The `/music` endpoint can be used to add or update music information for a specific entry.
-
 
