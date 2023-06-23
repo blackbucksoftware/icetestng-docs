@@ -54,4 +54,39 @@ The user who is requesting the new token needs to have EventAdmin permissions fo
 }
 ```
 
+## /participants
 
+The `/participants` endpoint can be used to retrieve information on all participants currently registered for the competition specified.
+
+```jsx title="GET /competition/participants" showLineNumbers
+{
+	"competitionId": "9ffa0058-35bf-433a-9d4db9cbffd54e52",
+    "token": "2KSZsnUN0jTOyCHj8M0/5w==",
+	"sandbox": false
+}
+```
+
+```jsx title="Expected result"
+[
+	{
+		"team": "",
+		"name_horse": "Nátfari fra Langtved",
+		"competition": "9ffa0058-35bf-433a-9d4db9cbffd54e52",
+		"feifid": "DK2007108500",
+		"fullname": "Lara Manfrahs",
+		"sta": 1,
+		"class": "Erwachsene",
+		"testlist": "Z1.F2,Z1.F2,Z1.FR1,Z1.T4,Z1.TR1"
+	},
+	{
+		"team": "",
+		"name_horse": "Náttfari fra Ll. Hafmey",
+		"competition": "9ffa0058-35bf-433a-9d4db9cbffd54e52",
+		"feifid": "DK2009100141",
+		"fullname": "Ann-Kristin Daus",
+		"sta": 2,
+		"class": "Erwachsene",
+		"testlist": "SA.T7,ZA.T7"
+	}
+]
+```
