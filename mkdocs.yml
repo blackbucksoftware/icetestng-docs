@@ -1,0 +1,44 @@
+site_name: IceTest-NG
+site_description: Documentation for IceTest-NG
+site_author: Blackbuck Software
+site_url: https://blackbucksoftware.github.io/icetestng/
+
+repo_url: https://github.com/blackbucksoftware/icetestng
+repo_name: GitHub
+edit_uri: edit/master/docs/
+
+theme:
+  name: readthedocs
+  custom_dir: readthedocs_custom
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - tables
+  - def_list
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - API Reference: your-other-pages.md
+  - Tutorial for Judges: tutorial-judges.md
+  - Release Notes: release-notes.md
