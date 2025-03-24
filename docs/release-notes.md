@@ -1,5 +1,9 @@
 # Release Notes
 
+## IceTest-NG 2.26.2
+* [FIX] Fix a bug related to empty group sizes.
+* [UPDATE] Refactor code for random equipment check selection.
+
 ## IceTest-NG 2.17.1
 * [FIX] Correctly set locale when a competition's country changes.
 * [FIX] Judge cards not printing for riders without assigned age class.
