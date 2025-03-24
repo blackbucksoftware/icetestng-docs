@@ -1,11 +1,11 @@
 site_name: IceTest-NG
 site_description: Documentation for IceTest-NG
 site_author: Blackbuck Software
-site_url: https://blackbucksoftware.github.io/icetestng/
+site_url: https://blackbucksoftware.github.io/icetestng-docs/
 
-repo_url: https://github.com/blackbucksoftware/icetestng
+repo_url: https://github.com/blackbucksoftware/icetestng-docs
 repo_name: GitHub
-edit_uri: edit/master/docs/
+edit_uri: edit/main/docs/
 
 theme:
   name: readthedocs
