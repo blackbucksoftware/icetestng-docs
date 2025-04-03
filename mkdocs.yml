@@ -40,6 +40,7 @@ nav:
   - Home: index.md
   # - Getting Started: getting-started.md
   # - API Reference: your-other-pages.md
+  - Import from Excel: import-csv.md
   - Tutorial for Judges: tutorial-judges.md
   - Derived Results:
     - Overall Rankings: custom-rankings.md
