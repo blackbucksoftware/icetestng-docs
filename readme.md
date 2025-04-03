@@ -5,7 +5,7 @@ This site contains the official documentation for [IceTest NG](https://www.icete
 
 ### Read the Docs
 
-The compiled documentation is available here: [IceTest NG documentation](https://blackbucksoftware.github.io/icetestng-docs/).
+The compiled documentation is available here: [IceTest NG documentation](https://icetestng-docs.readthedocs.io/en/latest/).
 
 
 ### Contributions welcome

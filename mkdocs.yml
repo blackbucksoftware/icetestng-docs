@@ -38,7 +38,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
-  - API Reference: your-other-pages.md
+  # - Getting Started: getting-started.md
+  # - API Reference: your-other-pages.md
   - Tutorial for Judges: tutorial-judges.md
-  - Release Notes: release-notes.md
+  - Derived Results:
+    - Overall Rankings: custom-rankings.md
+    - Build your own: custom-rankings-xml.md
+    - Examples: custom-rankings-samples.md
+  - About:
+    - Release Notes: release-notes.md
