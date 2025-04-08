@@ -1,5 +1,11 @@
 # Release Notes
 
+## IceTest-NG 2.27.0
+* [NEW]: Add start list with microchip column (startlist_microchip).
+* [UPDATE]: Update Vet Check Forms for 2025.
+* [UPDATE]: Scroll the test selection table for judges to the current date/time when loading the page.
+* [FIX]: Too-many-starts warning could attribute all starts of a horse to the same day.
+
 ## IceTest-NG 2.26.2
 * [FIX] Fix a bug related to empty group sizes.
 * [UPDATE] Refactor code for random equipment check selection.
