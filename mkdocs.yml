@@ -42,9 +42,11 @@ nav:
   # - API Reference: your-other-pages.md
   - Import from Excel: import-csv.md
   - Tutorial for Judges: tutorial-judges.md
-  - Derived Results:
+  - Derived Results:  
     - Overall Rankings: custom-rankings.md
     - Build your own: custom-rankings-xml.md
     - Examples: custom-rankings-samples.md
+  - Additional Tools:
+    - Equipment Check App: equipment-check-app.md
   - About:
     - Release Notes: release-notes.md
