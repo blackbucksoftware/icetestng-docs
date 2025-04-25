@@ -58,6 +58,25 @@ Possible outcomes are "Accepted", "Recheck", and "Rejected".
 
 ### Equipment
 
+Equipment or exit checks are done right after the horse has left the track after the class. Both the equipment used and the horse itself are checked.
+
+The app will offer all start lists of the competition by mentioning its test code and phase ("V1 PREL", "T3 AFIN", and so on). A start list will show a random selection of horses to be checked, but you can flip the "Show all?" switch at the top to see all horses. In addition, you can filter the list by entering the name of the horse or rider in the search field.
+
+After selecting a horse from the list, a variety of items can be documented. This includes details about the bit, the bridle, boots, and other protective equipment. There's also room for notes on the shoeing.
+
+If any injuries are found, they can be documented as well: 
+
+- Begin by selecting either the "Mouth" or "Leg" button. 
+- Locate the position of the wound by tapping on the corresponding area of the horse image.
+- Fill in the details of the wound, including its type, size, and any other relevant information.
+- You can also take a picture of the wound and add comments.
+- Finally, select the "Save" button to store the wound information.
+
+The app will automatically calculate the total wound score based on the number of wounds and their severity. The official can finally select the outcome of the check: "Accepted" or "Disqualified".
+
+If there are no injuries, the official can push the "Save Equipment" button and go back to the start list right away.
+
+In the upper right corner, there are two round icons. The first one brings up any other injuries of the horse that have been documented during the same competition. The second one shows the results of a previous shoeing check from the same competition. This way, the official can compare the current check with previous ones.
 
 
 ### Identification
