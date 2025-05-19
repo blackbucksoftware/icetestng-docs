@@ -21,7 +21,7 @@ The following prerequisites must be met to use the Equipment Check App:
 ## Installation
 **iPhone / iPad** users can download the app from the App Store by visiting the following link: [Equipment Check App for iOS](https://apps.apple.com/de/app/icetest-equipment/id6612007738).
 
-**Android** users: Please send an email to [support@icetestng.com](mailto:support@icetestng.com) and tell us your Google Play Store email address. We will send you an invitation to download the app.
+**Android** users can download the app from the Play Store here: [Equipment Check App for Android](https://play.google.com/store/apps/details?id=eu.blackbuck).
 
 ## Sign up / Login
 
