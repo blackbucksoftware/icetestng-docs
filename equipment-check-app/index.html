@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/equipment-check-app/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Equipment Check App - IceTest-NG</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Equipment Check App";
+        var mkdocs_page_input_path = "equipment-check-app.md";
+        var mkdocs_page_url = "/icetestng-docs/equipment-check-app/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Equipment Check App</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#supported-checks">Supported Checks</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sign-up-login">Sign up / Login</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#list-of-competitions">List of Competitions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conducting-checks">Conducting Checks</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arrival">Arrival</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit-to-compete">Fit-to-Compete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shoeing">Shoeing</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#equipment">Equipment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#identification">Identification</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-account">Demo Account</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Additional Tools</li>
+      <li class="breadcrumb-item active">Equipment Check App</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/equipment-check-app.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="equipment-check-app">Equipment Check App<a class="headerlink" href="#equipment-check-app" title="Permanent link">&para;</a></h1>
+<p>The Equipment Check App is the latest addition to the family of IceTest-NG tools. It allows officials (vets, ring masters, judges etc.) to conduct all checks mentioned in the FEIF Rules &amp; Regulations to ensure the wellbeing of horses shown in competitions. </p>
+<p>The app will document all checks and transfer the findings back to the IceTest-NG database. This way, all information is stored in one place and can be accessed by the data center manager, the judges and the officials. </p>
+<h2 id="supported-checks">Supported Checks<a class="headerlink" href="#supported-checks" title="Permanent link">&para;</a></h2>
+<p>Currently, the app can be used to document the following checks according to the FEIF Rules &amp; Regulations:</p>
+<ul>
+<li>Arrival check (normally only used at the World Championships)</li>
+<li>Fit-to-compete check (G5.1)</li>
+<li>Equipment check / exit check (G5.1)</li>
+<li>Shoeing check (G6.5)</li>
+<li>Identification check (S8.12)</li>
+</ul>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>The following prerequisites must be met to use the Equipment Check App:</p>
+<ul>
+<li>You need to have a user account in IceTest-NG with the role "Judge" assigned.</li>
+<li>You need to have a smartphone or tablet device running iOS or Android.</li>
+<li>The competition must be taking place in Denmark, Germany, or under direct responsibility of FEIF (for example the World Championships).</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p><strong>iPhone / iPad</strong> users can download the app from the App Store by visiting the following link: <a href="https://apps.apple.com/de/app/icetest-equipment/id6612007738">Equipment Check App for iOS</a>.</p>
+<p><strong>Android</strong> users can download the app from the Play Store here: <a href="https://play.google.com/store/apps/details?id=eu.blackbuck">Equipment Check App for Android</a>.</p>
+<h2 id="sign-up-login">Sign up / Login<a class="headerlink" href="#sign-up-login" title="Permanent link">&para;</a></h2>
+<p>When running the app for the first time, you will need to sign up with your email address. <em>This email address must be the same as the one you are registered with as an official in IceTest-NG</em>. If you are not sure which email address you are registered with, please contact the data center manager of the competition.</p>
+<p>After signing up, you will receive a confirmation email (check your spam folder in case you don't see the message in your inbox). Please click on the link in the email to confirm your account. After that, you can log in with your email address and password. </p>
+<p><strong>Please note</strong>: Your login credentials for the Equipment Check App are separate from your IceTest-NG credentials. Both share the same email address, but have different password. Once you created your login credentials for the app, you can use them for all future logins on as many devices and competitions as needed.</p>
+<h2 id="list-of-competitions">List of Competitions<a class="headerlink" href="#list-of-competitions" title="Permanent link">&para;</a></h2>
+<p>After logging in, you will see a list of current or upcoming competitions you are assigned to as an official. Tap the competition you want to work with to proceed.</p>
+<p>Please refer to the training section below to learn how to practice with the app before your first "real" competition.</p>
+<h2 id="conducting-checks">Conducting Checks<a class="headerlink" href="#conducting-checks" title="Permanent link">&para;</a></h2>
+<h3 id="arrival">Arrival<a class="headerlink" href="#arrival" title="Permanent link">&para;</a></h3>
+<p>This checks is usually done by a veterinarian as soon as the horse arrives at the competition grounds.  </p>
+<p>This is a very minimal check to confirm the horse's identity, vaccination history, temperature logging records and very basic health information.</p>
+<p><img alt="Arrival check screenshot." src="../equip_arrival.jpeg" /></p>
+<p>The first step is to scan the horses's microchip to confirm the chip matches the information at the top of the screen.   The veterinarian uses the drop-down option to indicate the outcome of the microchip scan.</p>
+<p>The veterinarian then enters the temperature, respirations, and pulse observations.  The three check sliders are used to confirm the general health of the horse, the vaccination schedule and its record in the passport, and that a correct temperature log is present.   In rare cases, the verterinarian can use the comment box to record any other observations.  This, normally, would only happen if a horse is not accepted into the competition grounds.</p>
+<p>Finally, the veterinarian completes the arrival using the Accepted or Rejected button to capture the overall conclusion of the arrival process.</p>
+<h3 id="fit-to-compete">Fit-to-Compete<a class="headerlink" href="#fit-to-compete" title="Permanent link">&para;</a></h3>
+<p>This check is usually done by a veterinarian after arrival of the horse at the competition grounds. </p>
+<p>The team can find a list of all starting combinations in the <strong>Fit to Compete</strong> test in the list of all the test phases at the competition.  The list shows all starting combinations together with an indication of which have been checked.  You may also use the search feature at the top of the screen to quickly find a combination based on the Starting Number, Rider, or Horse.</p>
+<p><img alt="List of starters for Fit to Compete" src="../equip_fit_list.PNG" /></p>
+<p>After selecting the horse from the list of participating horses, its pulse, respiration rate, and temperature can be entered along with additional comments. In case any wounds are found, they can be documented as described in the <a href="#equipment">Equipment Check</a> section.</p>
+<p><img alt="Fit to compete sample." src="../equip_fit.jpeg" /></p>
+<p>Possible outcomes are "Accepted", "Recheck", and "Rejected".  If a horse is <strong>accepted</strong> the status will change in IceTest from ENTERED to READY.  If a horse is set for <strong>recheck</strong> it will appear in the <strong>Fit to Compete RECHECK</strong> list automatically.  If a horse is <strong>rejected</strong> the status in IceTest will be set to CANCELLED.  </p>
+<p>The competition office should be informed about any horses which are <strong>rejected</strong> so they may make sure the test entries and any charges related to the competition are handled correctly.</p>
+<h3 id="shoeing">Shoeing<a class="headerlink" href="#shoeing" title="Permanent link">&para;</a></h3>
+<p>The shoeing check is sometimes done before the horse starts for the first time in the competition, but it can also be done at any time during the competition.</p>
+<p>After selecting the horse from the list of participating horses, a variety of items can be documented. This includes the length of all four toes, the thickness of the shoes, the presence of studs, cores, pads and rings. The official can also take pictures of the shoeing and add comments.</p>
+<p><img alt="Shoe check example." src="../equip_shoe.jpeg" /></p>
+<p>Possible outcomes are "Accepted", "Recheck", and "Rejected".  If a horse is selected for <strong>recheck</strong> it will automatically be placed in the list of shoeing rechecks.  Findings of <strong>accepted</strong> or <strong>rejected</strong> are not passed along to IceTest.  If a horse is removed from the competition entirely because of unacceptable shoeing, the competition office must get involved to make the necessary changes in IceTest.</p>
+<h3 id="equipment">Equipment<a class="headerlink" href="#equipment" title="Permanent link">&para;</a></h3>
+<p>Equipment or exit checks are done right after the horse has left the track after the class. Both the equipment used and the horse itself are checked.</p>
+<p>The app will offer all start lists of the competition by mentioning its test code and phase ("V1 PREL", "T3 AFIN", and so on). A start list will show a random selection of horses to be checked, but you can flip the "Show all?" switch at the top to see all horses. In addition, you can filter the list by Starting Number, the name of the horse, or the rider in the search field.</p>
+<p>After selecting a horse combination the list, a variety of items can be documented. This includes details about the bit, the bridle, boots, and other protective equipment. There's also room for notes on the shoeing.</p>
+<p><img alt="Equipment check -- top half" src="../equip_equip1.jpeg" /></p>
+<p>If any injuries are found, they can be documented as well toward the bottom of the screen:</p>
+<p><img alt="Equipment check -- top half" src="../equip_equip2.jpeg" /></p>
+<ul>
+<li>Begin by selecting either the "Mouth" or "Leg" button. </li>
+<li>Locate the position of the wound by tapping on the corresponding area of the horse image.</li>
+<li>Fill in the details of the wound, including its type, size, and any other relevant information.</li>
+<li>You can also take a picture of the wound and add comments.</li>
+<li>Finally, select the "Save" button to store the wound information.</li>
+</ul>
+<p>The app will automatically calculate the total wound score based on the number of wounds and their severity. The official can finally select the outcome of the check: "Accepted" or "Disqualified".</p>
+<p>If there are no injuries, the official can push the "Save Equipment" button and go back to the start list right away.</p>
+<p>In the upper right corner, there are two round icons. The first one brings up any other injuries of the horse that have been documented during the same competition. The second one shows the results of a previous shoeing check from the same competition. This way, the official can compare the current check with previous ones.</p>
+<h3 id="identification">Identification<a class="headerlink" href="#identification" title="Permanent link">&para;</a></h3>
+<p>The identification check is part of the <a href="#arrival">Arrival</a>, <a href="#fit-to-compete">Fit to Compete</a> and <a href="#equipment">Equipment</a> checks mentioned above. It's a simple check to verify the identity of the horse by microchip.</p>
+<p>The app shows the microchip number, FEIF-ID, and name of the selected horse. The official can check the microchip number with a microchip reader and compare the reading to the chip number shown in the app. Then, they can confirm/unconfirm the identity by selecting "Success" or "Failure" from the dropdown menu.</p>
+<p>Possible outcomes are "Success" and "Failure", and "No Attempt".</p>
+<h2 id="demo-account">Demo Account<a class="headerlink" href="#demo-account" title="Permanent link">&para;</a></h2>
+<p>If you want to try out the app before your first competition, you can use the demo account. Please contact us at <a href="mailto:support@icetestng.com">support@icetestng.com</a> to get the login credentials. The demo account is a fully functional version of the app, but it does not store any data in the IceTest-NG database. This way, you can practice with the app without affecting any real competition data.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../custom-rankings-samples/" class="btn btn-neutral float-left" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../release-notes/" class="btn btn-neutral float-right" title="Release Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../custom-rankings-samples/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../release-notes/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

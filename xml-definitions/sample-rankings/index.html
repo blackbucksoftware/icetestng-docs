@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/xml-definitions/sample-rankings/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Custom Derived Results: Examples - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Custom Derived Results: Examples";
+        var mkdocs_page_input_path = "xml-definitions/sample-rankings.md";
+        var mkdocs_page_url = "/icetestng-docs/xml-definitions/sample-rankings/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Custom Derived Results: Examples</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/xml-definitions/sample-rankings.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="custom-derived-results-examples">Custom Derived Results: Examples<a class="headerlink" href="#custom-derived-results-examples" title="Permanent link">&para;</a></h1>
+<p>Add <strong>Markdown or React</strong> files to <code>src/pages</code> to create a <strong>standalone page</strong>:</p>
+<ul>
+<li><code>src/pages/index.js</code> → <code>localhost:3000/</code></li>
+<li><code>src/pages/foo.md</code> → <code>localhost:3000/foo</code></li>
+<li><code>src/pages/foo/bar.js</code> → <code>localhost:3000/foo/bar</code></li>
+</ul>
+<p>:::tip My tip</p>
+<p>Use this awesome feature option</p>
+<p>:::</p>
+<p>:::danger Take care</p>
+<p>This action is dangerous</p>
+<p>:::</p>
+<p>:::warning My tip</p>
+<p>Use this awesome feature option</p>
+<p>:::</p>
+<p>:::info Take care</p>
+<p>This action is dangerous</p>
+<p>:::</p>
+<h2 id="create-your-first-react-page">Create your first React Page<a class="headerlink" href="#create-your-first-react-page" title="Permanent link">&para;</a></h2>
+<p>Create a file at <code>src/pages/my-react-page.js</code>:</p>
+<p>```jsx title="roderath2022.xml"</p>
+<!--
+  Note: This is only an excerpt, not the full file.
+  You can download the complete file below.
+!-->
+<p><derived_result>
+  <resultcode>KR.1</resultcode>
+  <name>Kreismeister</name>
+  <description></description>
+  <result_type>STA</result_type>
+  <blocks>
+    <block>
+      <name>Tölt</name>
+      <required>one</required>
+      <factor>1</factor>
+      <marks>1</marks>
+      <tests>
+        <test>
+          <testcode>%.T1</testcode>
+          <phase>PREL</phase>
+          <factor>0.85</factor>
+        </test>
+        <test>
+          <testcode>%.T2</testcode>
+          <phase>PREL</phase>
+          <factor>0.85</factor>
+        </test>
+        <test>
+          <testcode>%.T4</testcode>
+          <phase>PREL</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.T3</testcode>
+          <phase>PREL</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.T5</testcode>
+          <phase>PREL</phase>
+          <factor>0.6</factor>
+        </test>
+        <test>
+          <testcode>%.T6</testcode>
+          <phase>PREL</phase>
+          <factor>0.6</factor>
+        </test>
+        <test>
+          <testcode>%.T7</testcode>
+          <phase>PREL</phase>
+          <factor>0.4</factor>
+        </test>
+      </tests>
+    </block>
+    <block>
+      <name>Gang</name>
+      <required>one</required>
+      <factor>1</factor>
+      <marks>1</marks>
+      <tests>
+        <test>
+          <testcode>%.V1</testcode>
+          <phase>PREL</phase>
+          <factor>0.85</factor>
+        </test>
+        <test>
+          <testcode>%.F1</testcode>
+          <phase>PREL</phase>
+          <factor>0.85</factor>
+        </test>
+        <test>
+          <testcode>%.V2</testcode>
+          <phase>PREL</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.F2</testcode>
+          <phase>PREL</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.V3</testcode>
+          <phase>PREL</phase>
+          <factor>0.6</factor>
+        </test>
+        <test>
+          <testcode>%.V5</testcode>
+          <phase>PREL</phase>
+          <factor>0.4</factor>
+        </test>
+      </tests>
+    </block>
+    <block>
+      <name>Nebenplatz</name>
+      <required>one</required>
+      <factor>1</factor>
+      <marks>1</marks>
+      <tests>
+        <test>
+          <testcode>%.D3</testcode>
+          <phase>FIN</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.D4</testcode>
+          <phase>FIN</phase>
+          <factor>0.7</factor>
+        </test>
+        <test>
+          <testcode>%.D5</testcode>
+          <phase>FIN</phase>
+          <factor>0.6</factor>
+        </test>
+        <test>
+          <testcode>%.D6</testcode>
+          <phase>FIN</phase>
+          <factor>0.4</factor>
+        </test>
+        <test>
+          <testcode>%.TR1</testcode>
+          <phase>FIN</phase>
+          <factor>0.4</factor>
+        </test>
+        <test>
+          <testcode>%.PP1</testcode>
+          <phase>FIN</phase>
+          <factor>0.8</factor>
+        </test>
+        <test>
+          <testcode>%.P2</testcode>
+          <phase>FIN</phase>
+          <factor>0.7</factor>
+        </test>
+      </tests>
+    </block>
+  </blocks>
+</derived_result></p>
+<div class="codehilite"><pre><span></span><code><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">download</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">XML</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">here</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">roderath2022</span><span class="o">.</span><span class="n">xml</span><span class="p">](</span><span class="o">/</span><span class="n">xml</span><span class="o">/</span><span class="n">roderath2022</span><span class="o">.</span><span class="n">xml</span><span class="p">)</span><span class="o">.</span>
+
+<span class="n">A</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="p">[</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">react</span><span class="o">-</span><span class="n">page</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">react</span><span class="o">-</span><span class="n">page</span><span class="p">)</span><span class="o">.</span>
+
+<span class="c1">## Create your first Markdown Page</span>
+
+<span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">markdown</span><span class="o">-</span><span class="n">page</span><span class="o">.</span><span class="n">md</span><span class="err">`</span><span class="p">:</span>
+
+<span class="err">```</span><span class="n">mdx</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;src/pages/my-markdown-page.md&quot;</span>
+<span class="c1"># My Markdown page</span>
+
+<span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">Markdown</span><span class="w"> </span><span class="n">page</span>
+</code></pre></div>
+
+<p>A new page is now available at <a href="http://localhost:3000/my-markdown-page">http://localhost:3000/my-markdown-page</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/xml-definitions/sample-tests/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Custom Tests: Examples - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Custom Tests: Examples";
+        var mkdocs_page_input_path = "xml-definitions/sample-tests.md";
+        var mkdocs_page_url = "/icetestng-docs/xml-definitions/sample-tests/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Custom Tests: Examples</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/xml-definitions/sample-tests.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="custom-tests-examples">Custom Tests: Examples<a class="headerlink" href="#custom-tests-examples" title="Permanent link">&para;</a></h1>
+<p>This page features <strong>real-world examples</strong> of custom tests used by organizers in various countries.
+You can examine the XML used for test definition, and even download the complete XML file to modify it or import it into your own IceTest NG competition.</p>
+<p>:::tip Test your tests</p>
+<p>It's recommended to try out custom test definitions on the demo system first before importing them into a real event.</p>
+<p>:::</p>
+<h2 id="fivegait-on-ice">Fivegait on Ice<a class="headerlink" href="#fivegait-on-ice" title="Permanent link">&para;</a></h2>
+<p>This test is used by competitions on ice. It uses only tölt, trot, and pace as sections. At the same time, the number of finalists is increased to 7. There is no choice of rein, and the default group size for the PREL round is 4.</p>
+<p>```jsx title="davos2023.xml"</p>
+<!--
+  Note: This is only an excerpt, not the full file.
+  You can download the complete file below.
+!-->
+<p><tests>
+  <data:test id="XF1">
+    <testCode>XF1</testCode>
+    <testName>Eisfünfgangpreis spezial</testName>
+    <finalists>7</finalists>
+    <phases>
+      <phase>
+        <name>PREL</name>
+        <ref:phase_def ref="FOUR_RIDER_PREL" />
+      </phase>
+      <phase>
+        <name>BFIN</name>
+        <ref:phase_def ref="XF1" />
+      </phase>
+      <phase>
+        <name>AFIN</name>
+        <ref:phase_def ref="XF1" />
+      </phase>
+      <phase>
+        <name>SECR</name>
+        <ref:phase_def ref="XF1" />
+      </phase>
+    </phases>
+  </data:test>
+</tests></p>
+<p><phase_defs>
+  <data:phase_def id="XF1">
+    <reinChoice>false</reinChoice>
+    <groupSize>4</groupSize>
+    <dropSections/>
+    <ref:result ref="normal"/>
+    <sections>
+      <section>
+            <name>Tölt</name>
+            <description>Tölt</description>
+            <factor>1.0</factor>
+            <canDrop>false</canDrop>
+          </section>
+          <section>
+            <name>Trab</name>
+            <description>Trab</description>
+            <factor>1.0</factor>
+            <canDrop>false</canDrop>
+          </section>
+          <section>
+            <name>Rennpass</name>
+            <description>Rennpass</description>
+            <factor>1.0</factor>
+            <canDrop>false</canDrop>
+          </section>
+    </sections>
+    <judges>
+      <ref:judge ref="oval" />
+      <ref:judge ref="oval" />
+      <ref:judge ref="oval" />
+      <ref:judge ref="oval" />
+      <ref:judge ref="oval" />
+    </judges>
+  </data:phase_def></p>
+<p><data:phase_def id="FOUR_RIDER_PREL">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <ref:section ref="preliminary"/>
+      </sections>
+      <judges>
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+      </judges>
+    </data:phase_def>
+</phase_defs></p>
+<div class="codehilite"><pre><span></span><code>You<span class="w"> </span>can<span class="w"> </span>download<span class="w"> </span>the<span class="w"> </span>full<span class="w"> </span>XML<span class="w"> </span>file<span class="w"> </span>here:<span class="w"> </span>[davos2023.xml](/xml/davos2023.xml).
+
+##<span class="w"> </span>Fourgait<span class="w"> </span>on<span class="w"> </span>Ice
+
+Similiar<span class="w"> </span>to<span class="w"> </span>Fivegait<span class="w"> </span>on<span class="w"> </span>Ice,<span class="w"> </span>this<span class="w"> </span>test<span class="w"> </span>definition<span class="w"> </span>is<span class="w"> </span>limited<span class="w"> </span>to<span class="w"> </span>slow<span class="w"> </span>tölt,<span class="w"> </span>trot,<span class="w"> </span>and<span class="w"> </span>medium<span class="w"> </span>to<span class="w"> </span>fast<span class="w"> </span>speed<span class="w"> </span>tölt.<span class="w"> </span>There<span class="w"> </span>are<span class="w"> </span>7<span class="w"> </span>finalists,<span class="w"> </span>no<span class="w"> </span>choice<span class="w"> </span>of<span class="w"> </span>rein,<span class="w"> </span>and<span class="w"> </span>the<span class="w"> </span>default<span class="w"> </span>group<span class="w"> </span>size<span class="w"> </span>for<span class="w"> </span>the<span class="w"> </span>PREL<span class="w"> </span>round<span class="w"> </span>is<span class="w"> </span>4.
+
+```jsx<span class="w"> </span>title=&quot;davos2023.xml&quot;
+<span class="cm">&lt;!--</span>
+<span class="cm">  Note: This is only an excerpt, not the full file.</span>
+<span class="cm">  You can download the complete file below.</span>
+<span class="cm">!--&gt;</span>
+<span class="nt">&lt;tests&gt;</span>
+<span class="w">  </span><span class="nt">&lt;data:test</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;XV1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testCode&gt;</span>XV1<span class="nt">&lt;/testCode&gt;</span>
+<span class="w">    </span><span class="nt">&lt;testName&gt;</span>Eisviergangpreis<span class="w"> </span>spezial<span class="nt">&lt;/testName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;comments</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;qualification&gt;</span>Extra<span class="nt">&lt;/qualification&gt;</span>
+<span class="w">    </span><span class="nt">&lt;worldRanking&gt;</span>false<span class="nt">&lt;/worldRanking&gt;</span>
+<span class="w">    </span><span class="nt">&lt;heats&gt;</span>none<span class="nt">&lt;/heats&gt;</span>
+<span class="w">    </span><span class="nt">&lt;finalists&gt;</span>7<span class="nt">&lt;/finalists&gt;</span>
+<span class="w">    </span><span class="nt">&lt;phases&gt;</span>
+<span class="w">      </span><span class="nt">&lt;phase&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>PREL<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:phase_def</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;FOUR_RIDER_PREL&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/phase&gt;</span>
+<span class="w">      </span><span class="nt">&lt;phase&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>BFIN<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:phase_def</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;XV1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/phase&gt;</span>
+<span class="w">      </span><span class="nt">&lt;phase&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>AFIN<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:phase_def</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;XV1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/phase&gt;</span>
+<span class="w">      </span><span class="nt">&lt;phase&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;</span>SECR<span class="nt">&lt;/name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:phase_def</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;XV1&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/phase&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/phases&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/data:test&gt;</span>
+<span class="nt">&lt;/tests&gt;</span>
+
+<span class="nt">&lt;phase_defs&gt;</span>
+<span class="w">  </span><span class="nt">&lt;data:phase_def</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;XV1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;reinChoice&gt;</span>false<span class="nt">&lt;/reinChoice&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupSize&gt;</span>4<span class="nt">&lt;/groupSize&gt;</span>
+<span class="w">    </span><span class="nt">&lt;dropSections/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;ref:result</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;normal&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sections&gt;</span>
+<span class="w">      </span><span class="nt">&lt;section&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name&gt;</span>Langsamer<span class="w"> </span>Tölt<span class="nt">&lt;/name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;description&gt;</span>Langsamer<span class="w"> </span>Tölt<span class="nt">&lt;/description&gt;</span>
+<span class="w">            </span><span class="nt">&lt;factor&gt;</span>1.0<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;canDrop&gt;</span>false<span class="nt">&lt;/canDrop&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/section&gt;</span>
+<span class="w">          </span><span class="nt">&lt;section&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name&gt;</span>Trab<span class="nt">&lt;/name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;description&gt;</span>Trab<span class="nt">&lt;/description&gt;</span>
+<span class="w">            </span><span class="nt">&lt;factor&gt;</span>1.0<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;canDrop&gt;</span>false<span class="nt">&lt;/canDrop&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/section&gt;</span>
+<span class="w">          </span><span class="nt">&lt;section&gt;</span>
+<span class="w">            </span><span class="nt">&lt;name&gt;</span>Mittlerer<span class="w"> </span>bis<span class="w"> </span>schneller<span class="w"> </span>Tölt<span class="nt">&lt;/name&gt;</span>
+<span class="w">            </span><span class="nt">&lt;description&gt;</span>Mittlerer<span class="w"> </span>bis<span class="w"> </span>schneller<span class="w"> </span>Tölt<span class="nt">&lt;/description&gt;</span>
+<span class="w">            </span><span class="nt">&lt;factor&gt;</span>1.0<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;canDrop&gt;</span>false<span class="nt">&lt;/canDrop&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/section&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/sections&gt;</span>
+<span class="w">    </span><span class="nt">&lt;judges&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;oval&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;oval&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;oval&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;oval&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;oval&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/judges&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/data:phase_def&gt;</span>
+
+
+<span class="w">  </span><span class="nt">&lt;data:phase_def</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;FOUR_RIDER_PREL&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;reinChoice&gt;</span>false<span class="nt">&lt;/reinChoice&gt;</span>
+<span class="w">      </span><span class="nt">&lt;groupSize&gt;</span>4<span class="nt">&lt;/groupSize&gt;</span>
+<span class="w">      </span><span class="nt">&lt;dropSections/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;ref:result</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;normal&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;sections&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:section</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;preliminary&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/sections&gt;</span>
+<span class="w">      </span><span class="nt">&lt;judges&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;ovalPreliminary&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;ovalPreliminary&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;ovalPreliminary&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;ovalPreliminary&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;ref:judge</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;ovalPreliminary&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/judges&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/data:phase_def&gt;</span>
+<span class="nt">&lt;/phase_defs&gt;</span>
+</code></pre></div>
+
+<p>You can download the full XML file here: <a href="/xml/davos2023.xml">davos2023.xml</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

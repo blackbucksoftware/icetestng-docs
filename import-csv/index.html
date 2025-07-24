@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/import-csv/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Import from Excel - IceTest-NG</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Import from Excel";
+        var mkdocs_page_input_path = "import-csv.md";
+        var mkdocs_page_url = "/icetestng-docs/import-csv/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Import from Excel</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-import-data">How to import data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recognized-column-titels">Recognized column titels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#post-import-operations">Post import operations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#export-from-sporti">Export from Sporti</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defining-the-tests-properly">Defining the tests properly</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defining-age-classes">Defining age classes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#if-you-get-an-error">If you get an error</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Import from Excel</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/import-csv.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="importing-data-from-sporti">Importing Data from Sporti<a class="headerlink" href="#importing-data-from-sporti" title="Permanent link">&para;</a></h1>
+<p>This document describes how you can import participants' data collected with <a href="https://www.sporti.dk/">Sporti</a> into IceTestNG.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>The following data need to exist in IceTestNG before importing a Sporti file:</p>
+<ul>
+<li>the competition itself</li>
+<li><a href="#defineTest">the tests available</a></li>
+<li><a href="#age">the age classes</a></li>
+</ul>
+<h2 id="how-to-import-data">How to import data<a class="headerlink" href="#how-to-import-data" title="Permanent link">&para;</a></h2>
+<p>Sporti files can be imported by opening the Setup - <a href="competitionList.cfm">Competitions</a> page and selecting the competition you want to import the Sporti data into:</p>
+<ol>
+<li>Go to the <strong>Import Data</strong> tab.</li>
+<li>Select the Sporti file from your computer. <a href="#exportFile">See how to generate it properly</a></li>
+<li>Set the column delimiter to <strong>tab</strong>.</li>
+<li>Adjust the further import settings if needed.</li>
+<li>Click the <strong>Import Data</strong> button to start the import</li>
+</ol>
+<h2 id="recognized-column-titels">Recognized column titels<a class="headerlink" href="#recognized-column-titels" title="Permanent link">&para;</a></h2>
+<p>IceTestNG will recognize these column titels in the import file:</p>
+<table>
+<thead>
+<tr>
+<th>Column in CSV</th>
+<th style="text-align: center;">Entity in NG</th>
+<th>Column in NG</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>STA</code></td>
+<td style="text-align: center;">participant</td>
+<td>start number</td>
+<td><em>1</em></td>
+</tr>
+<tr>
+<td><strong><code>FEIFID</code></strong></td>
+<td style="text-align: center;">horse</td>
+<td>FEIF-ID</td>
+<td><em>NO2010108055</em></td>
+</tr>
+<tr>
+<td><strong><code>name_horse</code></strong></td>
+<td style="text-align: center;">horse</td>
+<td>name of horse</td>
+<td><em>Þokki frá Árgerði</em></td>
+</tr>
+<tr>
+<td><strong><code>rider</code></strong></td>
+<td style="text-align: center;">person</td>
+<td>full name</td>
+<td><em>Jane Doe</em></td>
+</tr>
+<tr>
+<td><code>birthday_horse</code></td>
+<td style="text-align: center;">horse</td>
+<td>date of birth</td>
+<td><em>2010-7-20</em></td>
+</tr>
+<tr>
+<td><code>owner</code></td>
+<td style="text-align: center;">horse</td>
+<td>horse owner</td>
+<td><em>Jane Doe</em></td>
+</tr>
+<tr>
+<td><code>breeder</code></td>
+<td style="text-align: center;">horse</td>
+<td>horse breeder</td>
+<td><em>John Doe</em></td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td style="text-align: center;">horse</td>
+<td>color</td>
+<td><em>Chestnut</em></td>
+</tr>
+<tr>
+<td><code>marking</code></td>
+<td style="text-align: center;">horse</td>
+<td>marking</td>
+<td><em>Star</em></td>
+</tr>
+<tr>
+<td><code>country_horse</code></td>
+<td style="text-align: center;">horse</td>
+<td>country of origin</td>
+<td><em>NO</em></td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td style="text-align: center;">horse</td>
+<td>sire</td>
+<td><em>Þokki frá Bjarnanesi</em></td>
+</tr>
+<tr>
+<td><code>ff</code></td>
+<td style="text-align: center;">horse</td>
+<td>father's father</td>
+<td><em>Stormur frá Bjarnanesi</em></td>
+</tr>
+<tr>
+<td><code>fm</code></td>
+<td style="text-align: center;">horse</td>
+<td>father's mother</td>
+<td><em>Gláma frá Eyjarhólum</em></td>
+</tr>
+<tr>
+<td><code>m</code></td>
+<td style="text-align: center;">horse</td>
+<td>dam</td>
+<td><em>Nös frá Árgerði</em></td>
+</tr>
+<tr>
+<td><code>mf</code></td>
+<td style="text-align: center;">horse</td>
+<td>mother's father</td>
+<td><em>Feykir frá Hafsteinsstöðum</em></td>
+</tr>
+<tr>
+<td><code>mm</code></td>
+<td style="text-align: center;">horse</td>
+<td>mother's mother</td>
+<td><em>Irpa frá Árgerði</em></td>
+</tr>
+<tr>
+<td><code>sex_horse</code></td>
+<td style="text-align: center;">horse</td>
+<td>gender</td>
+<td><em>Stallion</em></td>
+</tr>
+<tr>
+<td><code>microchip</code></td>
+<td style="text-align: center;">horse</td>
+<td>microchip</td>
+<td><em>352206000045XXX</em></td>
+</tr>
+<tr>
+<td><code>name_first</code></td>
+<td style="text-align: center;">person</td>
+<td>first name</td>
+<td><em>Jane</em></td>
+</tr>
+<tr>
+<td><code>name_last</code></td>
+<td style="text-align: center;">person</td>
+<td>last name</td>
+<td><em>Doe</em></td>
+</tr>
+<tr>
+<td><code>birthday</code></td>
+<td style="text-align: center;">person</td>
+<td>date of birth</td>
+<td><em>1986-6-23</em></td>
+</tr>
+<tr>
+<td><code>city</code></td>
+<td style="text-align: center;">person</td>
+<td>city</td>
+<td><em>Vienna</em></td>
+</tr>
+<tr>
+<td><code>mobile</code></td>
+<td style="text-align: center;">person</td>
+<td>mobile</td>
+<td><em>+1234567890</em></td>
+</tr>
+<tr>
+<td><code>phonemobile</code></td>
+<td style="text-align: center;">person</td>
+<td>mobile</td>
+<td><em>+1234567890</em></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td style="text-align: center;">person</td>
+<td>email</td>
+<td><em>hello@gmail.com</em></td>
+</tr>
+<tr>
+<td><code>team</code></td>
+<td style="text-align: center;">participant</td>
+<td>team</td>
+<td><em>Tölty Tölters</em></td>
+</tr>
+<tr>
+<td><code>club</code></td>
+<td style="text-align: center;">participant</td>
+<td>club</td>
+<td><em>Katla</em></td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td style="text-align: center;">participant</td>
+<td>age class</td>
+<td><em>Senior</em></td>
+</tr>
+<tr>
+<td><code>stable</code></td>
+<td style="text-align: center;">participant</td>
+<td>stabling option</td>
+<td><em>Box</em></td>
+</tr>
+</tbody>
+</table>
+<p>Column titles not mentioned in the table above will be treated as test codes. </p>
+<p>Only the <strong>bold columns</strong> are required, all others are optional.</p>
+<h2 id="post-import-operations">Post import operations<a class="headerlink" href="#post-import-operations" title="Permanent link">&para;</a></h2>
+<p>IceTestNG will try to match all FEIF-IDs against <a href="http://www.worldfengur.com">WorldFengur</a> after import. 
+If the FEIF-ID is known to WorldFengur, the horse data will be used in IceTestNG as well.
+The matching process can take some time and happens automatically in the background.</p>
+<h2 id="export-from-sporti">Export from Sporti <a name="exportFile"></a><a class="headerlink" href="#export-from-sporti" title="Permanent link">&para;</a></h2>
+<p>When exporting the file from Sporti, make sure the settings are as seen below:
+<img alt="" src="./docs/images/sporti.jpg" /></p>
+<p>You need to convert the resulting xls-file to a UTF-8 comma separated file by opening it in Excel and pressing Save as or Export.</p>
+<h2 id="defining-the-tests-properly">Defining the tests properly<a ame="defineTest"></a><a class="headerlink" href="#defining-the-tests-properly" title="Permanent link">&para;</a></h2>
+<p>You need to make sure that the test columns in the CSV match the test codes in IceTestNG:
+<img alt="" src="./docs/images/testlist.jpg" /></p>
+<p>If you have multiple instances of a test, e.g. T8.s and T8.j, you can edit the testcode by pressing the pen icon. When a test has been assigned a new testcode, it will reappear in the list, and you can drag it into your event again.</p>
+<h2 id="defining-age-classes">Defining age classes <a name="age"></a><a class="headerlink" href="#defining-age-classes" title="Permanent link">&para;</a></h2>
+<p>If you want IceTestNG to assign age classes, you need to define them for your event first:
+<img alt="" src="./docs/images/ageclass.jpg" /></p>
+<p>And set the switch to on in the import settings:
+<img alt="" src="./docs/images/ageswitch.jpg" /></p>
+<h2 id="if-you-get-an-error">If you get an error<a class="headerlink" href="#if-you-get-an-error" title="Permanent link">&para;</a></h2>
+<p>If IceTestNG reports that it could not recognise column or test name, first make sure you defined the test properly. If the column is safe to skip, you can try to copy the columns names suggestion into the field "Skip columns in file”</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tutorial-judges/" class="btn btn-neutral float-right" title="Tutorial for Judges">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tutorial-judges/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

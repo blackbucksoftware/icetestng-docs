@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/tutorial-judges/02_single_tests/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Single Rider Tests - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Single Rider Tests";
+        var mkdocs_page_input_path = "tutorial-judges/02_single_tests.md";
+        var mkdocs_page_url = "/icetestng-docs/tutorial-judges/02_single_tests/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Single Rider Tests</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/tutorial-judges/02_single_tests.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="single-rider-tests">Single Rider Tests<a class="headerlink" href="#single-rider-tests" title="Permanent link">&para;</a></h1>
+<p>How to enter marks and comments for a rider in a single rider test (T1, T2, V1, F1).</p>
+<h3 id="1-select-test">1. Select test<a class="headerlink" href="#1-select-test" title="Permanent link">&para;</a></h3>
+<p>Click on "Enter marks" in the row of the test and phase you want to open.</p>
+<ul>
+<li>You can only enter tests that you have been assigned to as a judge by the data center.
+<img alt="Step 1 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/1a48f734-2329-450a-8e56-660192dafe19/d665d0b7-25d8-41be-9b9c-0c323492828e.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=41&amp;mark-y=260&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz05MyZoPTM4JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></li>
+</ul>
+<h3 id="2-select-rider">2. Select rider<a class="headerlink" href="#2-select-rider" title="Permanent link">&para;</a></h3>
+<p>Click on the little blue track icon for the rider that is coming next.</p>
+<ul>
+<li>
+<p>Select either a single rider in the STA column or the whole group in the Grp. column.</p>
+</li>
+<li>
+<p>The selected rider(s) appear highlighted in green.
+<img alt="Step 2 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/fdefbe5b-0f96-4ea8-a35a-2c87f29856d0/0676cf8e-09bd-4f3f-9f80-1859c8c5b863.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=765&amp;mark-y=256&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0yMSZoPTIxJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+</li>
+</ul>
+<h3 id="3-send-riders-to-track">3. Send rider(s) to track<a class="headerlink" href="#3-send-riders-to-track" title="Permanent link">&para;</a></h3>
+<p>Scroll down to the bottom of the list and click "Send Riders to Track"
+<img alt="Step 3 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/ed719460-9d6f-4966-8196-4a9a4aaf2a6b/71af929b-934b-48e0-badc-bd999c7f4f24.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.8027&amp;fp-y=0.8099&amp;fp-z=2.1059&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=765&amp;mark-y=690&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0zNDAmaD05NSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+<h3 id="4-enter-marks">4. Enter marks<a class="headerlink" href="#4-enter-marks" title="Permanent link">&para;</a></h3>
+<p>Type in a mark for each section.</p>
+<ul>
+<li>
+<p>No need to type the "." or ",".</p>
+</li>
+<li>
+<p>You can also use the marks entry toolbar at the bottom on a page.</p>
+</li>
+<li>
+<p>On a tablet disable the keyboard by clicking the grey button left from the marks toolbar.
+<img alt="Step 4 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/e300a4f5-acb1-45c1-8a58-71e0c8339587/96d27eb9-45fc-4f08-bb07-451102ef7d6a.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=976&amp;mark-y=249&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0xNjMmaD00NiZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+</li>
+</ul>
+<h3 id="5-enter-comments">5. Enter comments<a class="headerlink" href="#5-enter-comments" title="Permanent link">&para;</a></h3>
+<p>The big field in the middle is for comments.</p>
+<ul>
+<li>
+<p>Submit each comment with "Enter" or ",". Only blue marked comments will be transmitted.</p>
+</li>
+<li>
+<p>You can add several comments per section.
+<img alt="Step 5 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/34340e87-679d-4e19-860e-41aa396c2dec/a2139896-051c-4df4-a1d2-0021e092bb5c.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=427&amp;mark-y=250&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz01MjkmaD05NSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+</li>
+</ul>
+<h3 id="6-frequently-used-comments">6. Frequently used comments<a class="headerlink" href="#6-frequently-used-comments" title="Permanent link">&para;</a></h3>
+<p>Some frequently used comments can be selected directly with the button left from the comments field.
+<img alt="Step 6 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/5e7942e8-61ed-4932-bfc4-1e6db9befd79/5beb3c8f-6e0e-4155-8938-7af2190708ca.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.4930&amp;fp-y=0.5024&amp;fp-z=1.0790&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=363&amp;mark-y=231&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz01NyZoPTQ4JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+<h3 id="7-pace-sprints">7. Pace sprints<a class="headerlink" href="#7-pace-sprints" title="Permanent link">&para;</a></h3>
+<p>Type a mark and click on "Sprint 1 Mark" or "Sprint 2 Mark" to add the marks per sprint as a comment. You still have to enter the total mark manually afterwards!
+<img alt="Step 7 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/e9b40052-c996-40e4-96ed-21eaa26c4ef3/38804685-4db2-433a-a6e8-850020fe3624.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.6543&amp;fp-y=0.7081&amp;fp-z=1.6022&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=709&amp;mark-y=684&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0xNjImaD02MCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+<h3 id="8-send-marks">8. Send marks<a class="headerlink" href="#8-send-marks" title="Permanent link">&para;</a></h3>
+<p>Check if everything is correct and complete and then click the lock icon at the bottom of the page.</p>
+<ul>
+<li>You can always see the total result on top of the page.
+<img alt="Step 8 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/8636148a-9e3b-4859-a76e-b62af87510f5/615892f5-fedd-4a47-ae41-b176d597d81c.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=265&amp;mark-y=869&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz02MiZoPTYwJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></li>
+</ul>
+<h3 id="9-confirm">9. Confirm<a class="headerlink" href="#9-confirm" title="Permanent link">&para;</a></h3>
+<p>Confirm that you want to lock the marks. As soon as you have locked the marks you can not change anything yourself anymore!</p>
+<ul>
+<li>
+<p>If a correction of your marks necessary ask the data center edit the marks.</p>
+</li>
+<li>
+<p>If you click "Always" the confirmation dialog will not appear again.
+<img alt="Step 9 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/52fc2b6e-1b38-4c7f-bb6a-583f571de0ed/9692c386-d4e8-4780-ba29-07ac91c62f2d.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3148&amp;fp-y=0.7655&amp;fp-z=1.9369&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=397&amp;mark-y=708&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz05NCZoPTczJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+</li>
+</ul>
+<h3 id="10-total-results">10. Total results<a class="headerlink" href="#10-total-results" title="Permanent link">&para;</a></h3>
+<p>After locking a summary of the total results will be displayed.
+<img alt="Step 10 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/b72bf0b4-74ba-4ded-b6eb-edfefc8a43ac/54092408-cf5e-474d-8294-c5dca9f6b3aa.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n" /></p>
+<h3 id="11-next-rider">11. Next rider<a class="headerlink" href="#11-next-rider" title="Permanent link">&para;</a></h3>
+<p>Click on the tab "Start list" to select the next rider/group.
+<img alt="Step 11 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/cd5d51c4-4133-4935-84d8-b8b86e27c3bf/08533c30-cb35-41f4-ad21-fb13279b54f8.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.0723&amp;fp-y=0.1790&amp;fp-z=2.4897&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=64&amp;mark-y=356&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0zMDQmaD0xMjMmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D" /></p>
+<h3 id="12-result-list-and-resend">12. Result list and resend<a class="headerlink" href="#12-result-list-and-resend" title="Permanent link">&para;</a></h3>
+<p>The tab "Result List" contains all completed results.</p>
+<ul>
+<li>
+<p>You can fold out all details of every result.</p>
+</li>
+<li>
+<p>The data center might ask you to resend the result of a certain combination/STA. You can find the button to do so in the detail view.
+<img alt="Step 12 screenshot" src="https://images.tango.us/workflows/ce08fed8-885b-453e-ba5b-171c4928c2c5/steps/23a98d3c-5e59-4ca6-805b-7c3a6cc8bb41/8c31c048-53af-4c13-9958-eebd6fb4e9ae.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=56&amp;mark-y=538&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz03NiZoPTM2JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+</li>
+</ul>
+<hr />
+<p><strong>Creation Date:</strong> April 26, 2023<br />
+<strong>Created By:</strong> Maxi Stapelfeldt<br />
+<a href="https://app.tango.us/app/workflow/ce08fed8-885b-453e-ba5b-171c4928c2c5?utm_source=markdown&amp;utm_medium=markdown&amp;utm_campaign=workflow%20export%20links">View most recent version on Tango.us</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

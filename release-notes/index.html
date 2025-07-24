@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/release-notes/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Release Notes - IceTest-NG</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Release Notes";
+        var mkdocs_page_input_path = "release-notes.md";
+        var mkdocs_page_url = "/icetestng-docs/release-notes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Release Notes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2270">IceTest-NG 2.27.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2262">IceTest-NG 2.26.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2171">IceTest-NG 2.17.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-217">IceTest-NG 2.17</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-216">IceTest-NG 2.16</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-215">IceTest-NG 2.15</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-211">IceTest-NG 2.11</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2107">IceTest-NG 2.10.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2104">IceTest-NG 2.10.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2103">IceTest-NG 2.10.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-2100">IceTest-NG 2.10.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-299">IceTest-NG 2.9.9</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-298">IceTest-NG 2.9.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-297">IceTest-NG 2.9.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-297_1">IceTest-NG 2.9.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-296">IceTest-NG 2.9.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-295">IceTest-NG 2.9.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-294">IceTest-NG 2.9.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-293">IceTest-NG 2.9.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-290">IceTest-NG 2.9.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-288">IceTest-NG 2.8.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-286">IceTest-NG 2.8.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-285">IceTest-NG 2.8.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-284">IceTest-NG 2.8.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-28">IceTest-NG 2.8</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-27">IceTest-NG 2.7</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-26">IceTest-NG 2.6</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-25">IceTest-NG 2.5</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-24">IceTest-NG 2.4</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-23">IceTest-NG 2.3</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-22">IceTest-NG 2.2</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-21">IceTest-NG 2.1</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-20">IceTest-NG 2.0</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-019">IceTest-NG 0.19</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-018">IceTest-NG 0.18</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-017">IceTest-NG 0.17</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#icetest-ng-016">IceTest-NG 0.16</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">About</li>
+      <li class="breadcrumb-item active">Release Notes</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/release-notes.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<h2 id="icetest-ng-2270">IceTest-NG 2.27.0<a class="headerlink" href="#icetest-ng-2270" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW]: Add start list with microchip column (startlist_microchip).</li>
+<li>[UPDATE]: Update Vet Check Forms for 2025.</li>
+<li>[UPDATE]: Scroll the test selection table for judges to the current date/time when loading the page.</li>
+<li>[FIX]: Too-many-starts warning could attribute all starts of a horse to the same day.</li>
+</ul>
+<h2 id="icetest-ng-2262">IceTest-NG 2.26.2<a class="headerlink" href="#icetest-ng-2262" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Fix a bug related to empty group sizes.</li>
+<li>[UPDATE] Refactor code for random equipment check selection.</li>
+</ul>
+<h2 id="icetest-ng-2171">IceTest-NG 2.17.1<a class="headerlink" href="#icetest-ng-2171" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Correctly set locale when a competition's country changes.</li>
+<li>[FIX] Judge cards not printing for riders without assigned age class.</li>
+<li>[FIX] Data export to WorldRanking.</li>
+</ul>
+<h2 id="icetest-ng-217">IceTest-NG 2.17<a class="headerlink" href="#icetest-ng-217" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Add age class to judge cards.</li>
+<li>[UPDATE] Improve post-event export to IPZV.</li>
+<li>[FIX] Number of finalists in split-results when using 6 spots in AFIN.</li>
+<li>[UPDATE] Handling of red cards in Secretary mode.</li>
+<li>[UPDATE] Improve derived results for teams.</li>
+<li>[UPDATE] Submit results to IceCompass when not in Secretary mode.</li>
+<li>[UPDATE] Let judges re-send marks in Secretary mode.</li>
+<li>[UPDATE] Better support for PP1/P1/P2/P3 when using a video wall.</li>
+<li>[UPDATE] Improve data center's correction window for Secretary mode.</li>
+<li>[FIX] Correct starting order of 2nd/3rd/4th heat in P1/P3 for very slow times.</li>
+<li>[UPDATE] IPZV start list sorting procedure updated.</li>
+<li>[UPDATE] Secretary mode documentation updated.</li>
+<li>[UPDATE] Docs updated.</li>
+<li>[FIX] Repair button to delete participants.</li>
+</ul>
+<h2 id="icetest-ng-216">IceTest-NG 2.16<a class="headerlink" href="#icetest-ng-216" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Fix automatic activation of ticker feed for split tests (CU-2eat5yg).</li>
+<li>[FIX] Always flag horse for data update when creating a new participant.</li>
+<li>[NEW] Allow P2 heat 2 start lists to be locked to heat 1.</li>
+<li>[NEW] Add manual ticker push button to start list page.</li>
+<li>[NEW] Display PersonID when looking up persons.</li>
+<li>[NEW] Add support for music playlists in single rider classes.</li>
+<li>[NEW] Support self check-in via app.</li>
+<li>[NEW] Introduce the IceTestNG newsletter.</li>
+</ul>
+<h2 id="icetest-ng-215">IceTest-NG 2.15<a class="headerlink" href="#icetest-ng-215" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Update multi-starter markers after removing an entry (CU-1wegmwv).</li>
+<li>[UPDATE] Improve CSV handling while importing classic files.</li>
+<li>[NEW] Support for Danish ranking site IceCompass Id.</li>
+</ul>
+<h2 id="icetest-ng-211">IceTest-NG 2.11<a class="headerlink" href="#icetest-ng-211" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Support mark-based, heated tests like PP3.</li>
+<li>[FIX] Judge cards for D3 (and some other FIN phase tests) don't print.</li>
+</ul>
+<h2 id="icetest-ng-2107">IceTest-NG 2.10.7<a class="headerlink" href="#icetest-ng-2107" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Judge cards for FZ1 (and other FIN phase tests) don't print.</li>
+<li>[FIX] Starting lists of tests with no entries throw an error.</li>
+<li>[NEW] Admins can swap test definitions for existing tests.</li>
+</ul>
+<h2 id="icetest-ng-2104">IceTest-NG 2.10.4<a class="headerlink" href="#icetest-ng-2104" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Incorrect scores in finals of tests with droppable sections (161).</li>
+<li>[UPDATE] Improve CouchDB handling in YHE tests.</li>
+</ul>
+<h2 id="icetest-ng-2103">IceTest-NG 2.10.3<a class="headerlink" href="#icetest-ng-2103" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Provide a startlist template for riders' music wishes.</li>
+<li>[UPDATE] Don't put breaks on the track when SECR mode auto-advance is active.</li>
+</ul>
+<h2 id="icetest-ng-2100">IceTest-NG 2.10.0<a class="headerlink" href="#icetest-ng-2100" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Send marks &amp; comments to riders from the results page (when using SECR mode).</li>
+<li>[FIX] Use correct number of decimals when rounding in SECR mode.</li>
+<li>[FIX] Fix rounding in tests with more than 2 decimals (149).</li>
+<li>[UPDATE] Improve UI of the marks entry page when using SECR mode.</li>
+<li>[UPDATE] Make in-app messaging (Stomp) more reliable.</li>
+</ul>
+<h2 id="icetest-ng-299">IceTest-NG 2.9.9<a class="headerlink" href="#icetest-ng-299" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Send marks &amp; comments to riders from the results page (when using SECR mode).</li>
+<li>[UPDATE] Trigger mark processing from the marks entry page (when using SECR mode).</li>
+</ul>
+<h2 id="icetest-ng-298">IceTest-NG 2.9.8<a class="headerlink" href="#icetest-ng-298" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Improve syncing sponsor logos.</li>
+<li>[UPDATE] Add street address to participant XLS export.</li>
+<li>[FIX] Always get the correct Not-Yet-Started list in SECR mode.</li>
+</ul>
+<h2 id="icetest-ng-297">IceTest-NG 2.9.7<a class="headerlink" href="#icetest-ng-297" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Improve printing functions.</li>
+<li>[UPDATE] Allow self-checkin for everybody if desired.</li>
+</ul>
+<h2 id="icetest-ng-297_1">IceTest-NG 2.9.7<a class="headerlink" href="#icetest-ng-297_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Improve printing functions.</li>
+<li>[UPDATE] Allow self-checkin for everybody if desired.</li>
+</ul>
+<h2 id="icetest-ng-296">IceTest-NG 2.9.6<a class="headerlink" href="#icetest-ng-296" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Fix judges' days in WR report generation.</li>
+</ul>
+<h2 id="icetest-ng-295">IceTest-NG 2.9.5<a class="headerlink" href="#icetest-ng-295" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Support custom test names via API.</li>
+<li>[UPDATE] Support product creation via API.</li>
+<li>[FIX] Ticker: Mark vs. time in results of race tests (148).</li>
+<li>[UPDATE] Update WR report generation (150).</li>
+</ul>
+<h2 id="icetest-ng-294">IceTest-NG 2.9.4<a class="headerlink" href="#icetest-ng-294" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Fix STA filter in report card generation.</li>
+<li>[FIX] Startlists in P1 not sorted for heats 2,3,4 (139).</li>
+<li>[UPDATE] Improve self-check-in status info on startlsts.</li>
+<li>[UPDATE] Finals: Send push notifications to the ticker app only for complete results.</li>
+</ul>
+<h2 id="icetest-ng-293">IceTest-NG 2.9.3<a class="headerlink" href="#icetest-ng-293" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Tie break pop up dialog not working (136).</li>
+<li>[FIX] Speaker screen not always updating (134).</li>
+</ul>
+<h2 id="icetest-ng-290">IceTest-NG 2.9.0<a class="headerlink" href="#icetest-ng-290" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Add support for six riders in AFIN as described in FEIF RR 2021.</li>
+<li>[UPDATE] Tweak menu design.</li>
+<li>[UPDATE] Add more layouts for startlists, results.</li>
+<li>[FIX] Judge cards for FIN phases.</li>
+</ul>
+<h2 id="icetest-ng-288">IceTest-NG 2.8.8<a class="headerlink" href="#icetest-ng-288" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Delete user if connected person is removed (131) </li>
+<li>[FIX] SecMode: Publication of FIN phases (120)</li>
+</ul>
+<h2 id="icetest-ng-286">IceTest-NG 2.8.6<a class="headerlink" href="#icetest-ng-286" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Vet Form 2 won't print (127) </li>
+<li>[FIX] Add breaks, demo rider in startlists (124)</li>
+<li>[FIX] Removing a sponsor fails (121)</li>
+</ul>
+<h2 id="icetest-ng-285">IceTest-NG 2.8.5<a class="headerlink" href="#icetest-ng-285" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[UPDATE] Young Horse Evaluation: Improved report format</li>
+</ul>
+<h2 id="icetest-ng-284">IceTest-NG 2.8.4<a class="headerlink" href="#icetest-ng-284" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Creating a new competition might fail</li>
+<li>[FIX] Columns in table views (participants, persons, horses etc.) not selectable</li>
+</ul>
+<h2 id="icetest-ng-28">IceTest-NG 2.8<a class="headerlink" href="#icetest-ng-28" title="Permanent link">&para;</a></h2>
+<h2 id="icetest-ng-27">IceTest-NG 2.7<a class="headerlink" href="#icetest-ng-27" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Add Self-Check-In for riders</li>
+<li>[NEW] Add Swedish translations</li>
+<li>[FIX] Updating your own password fails (issue 558)</li>
+<li>[FIX] Mark analysis graph 0.5 off (issue 562)</li>
+<li>[FIX] Corrections view skips 1st judge in independent secretary mode (issue 561)</li>
+<li>[FIX] Corrections view displays some riders more than once (issue 564)</li>
+<li>[FIX] Secretary report not working for rider names (issue 565)</li>
+<li>[FIX] Let national admins remove a future competition from the ticker</li>
+<li>[UPDATE] Improve report for riders with judges' comments</li>
+<li>[UPDATE] Allow removal of breaks for locked start lists (issue 559)</li>
+</ul>
+<h2 id="icetest-ng-26">IceTest-NG 2.6<a class="headerlink" href="#icetest-ng-26" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Confirmation dialog when removing tests (issue 551)</li>
+<li>[NEW] Add new participant status values: SELFCHECKIN and PENDING (issue 540)</li>
+<li>[NEW] Expose starting numbers in results side of marks entry (issue 536)</li>
+<li>[NEW] Add feifid to the list of columns in the combinations overview (issue 532)</li>
+<li>[NEW] Expose combination comments on speaker screen (issue 531)</li>
+<li>[NEW] Move print button on marks entry page (issue 522)</li>
+<li>[NEW] Show test name in bold (large) font in marks entry headline (issue 521)</li>
+<li>[NEW] Decorate riders with more than one horse in a final (issue 519)</li>
+<li>[NEW] Show participant status on startlist (issue 518)</li>
+<li>[NEW] Quick nav between marks entry, start list and results for current test (issue 516)</li>
+<li>[NEW] Add column specific search for data tables (issue 505)</li>
+<li>[NEW] Allow resizing of popovers (issue 502)</li>
+<li>[NEW] Add FEIF ID when searching horses to make a new starting combination (issue 499)</li>
+<li>[NEW] Import complex time schedule from Excel (issue 496)</li>
+<li>[FIX] Cannot assign default judges for the whole competition (issue 549)</li>
+<li>[FIX] Don't include riders who have marks in the secretary marks start list (issue 545)</li>
+<li>[FIX] New persons not flowing back to new combination (issue 525)</li>
+<li>[FIX] Results with more than one page missing page header (issue 524)</li>
+<li>[FIX] Judges missing on printed results where combinations have withdrawn (issue 523)</li>
+<li>[FIX] Sorting errors in group start lists (issue 517)</li>
+<li>[FIX] Printing invoices generates blank second page (issue 510)</li>
+<li>[FIX] Check datatable filter persistence (issue 509)</li>
+<li>[FIX] Preserve location in datatable while editing (issue 506)</li>
+<li>[FIX] New balance not updating (issue 495)</li>
+<li>[FIX] Phase state in P1 with only two heats (issue 492)</li>
+<li>[FIX] Error sorting start list for heated tests (issue 483)</li>
+<li>[UPDATE] Filter variables, products, and competitions for normal users (issue 515)</li>
+<li>[UPDATE] loading FEIF judges (issue 537)</li>
+</ul>
+<p>Version 2.6 was released on February 4, 2020.</p>
+<h2 id="icetest-ng-25">IceTest-NG 2.5<a class="headerlink" href="#icetest-ng-25" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Derived results: Add support for "best n" marks in blocks for STAs (issue 455)</li>
+<li>[NEW] Derived results: Add optional <required_club> to XML definition to limit the participation in the calculation based on membership in a specific club (issue 383)</li>
+<li>[NEW] Add judge summary by country report (issue 478)</li>
+<li>[NEW] Add documentation on setting up calculation of derived results.</li>
+<li>[NEW] Option to add demo rider to judge cards (issue 268)</li>
+<li>[FIX] Saving ticker publication settings work as expected (issue 474)</li>
+<li>[FIX] Publish split result scores using the same conditions as complete results (time, points, or percentage) and with the correct decimal places (issues 462, 347)</li>
+<li>[FIX] FIN splits not sending to the ticker (issue 456)</li>
+<li>[FIX] Withdrawn combinations remain on ticker site (issue 228)</li>
+<li>[FIX] Withdrawals from LOCKED tests (issues 55, 235)</li>
+<li>[FIX] Rider withdrawn from BFIN might show up in AFIN (issue 442)</li>
+<li>[FIX] Orphan withdrawn entries on ticker (issue 443)</li>
+<li>[FIX] Withdrawing from an AFIN after the BFIN is COMPLETE pulls riders in from the preliminary (issue 445)</li>
+<li>[FIX] Next rider after a NOSHOW disappears from screen (issue 479)</li>
+<li>[FIX] Extreme late entries: Withdraws after the list is LOCKED (or ACTIVE) now prompts to DQ the rider (issue 52)</li>
+<li>[FIX] Print judge cards as expected in CFINs for split tests</li>
+<li>[UPDATE] Set default secretary position in single-judge shows (issue 472)</li>
+<li>[UPDATE] Derived results: The required number of marks per block can now be enforced by using  <marks_strict> in XML</li>
+<li>[UPDATE] Change the ‘rider’ label on reports and the Ticker for YHE tests (issue 408)</li>
+<li>[UPDATE] YHE tests now support derived results (issue 475)</li>
+<li>[UPDATE] Allow 2 character entry classes (think YR)</li>
+<li>[UPDATE] Admins can remove a competition from the Ticker from the competition ticker options tab provided there are no marks yet (issue 376)</li>
+<li>[UPDATE] Turn on columns for not-yet-started list on the speaker screen (issue 224)</li>
+<li>[UPDATE] Add Chief and Deputy Chief judge days to the WR export file (issue 195)</li>
+</ul>
+<p>Version 2.5 was released on September 23, 2019.</p>
+<h2 id="icetest-ng-24">IceTest-NG 2.4<a class="headerlink" href="#icetest-ng-24" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Add analysis feature for marks collected in secretary mode</li>
+<li>[NEW] Add support to hold final results back from the ticker until they are locked (issue 241)</li>
+<li>[NEW] Expose the per-test armband color list override in the edit test page</li>
+<li>[NEW] Export judges' days for non-international judges when creating WR report files</li>
+<li>[NEW] YHE: Sort start lists by horse age</li>
+<li>[NEW] Add fit-to-compete status</li>
+<li>[NEW] Add list of granted users to the index page (issue 269)</li>
+<li>[NEW] Add doping control selection feature (issue 122)</li>
+<li>[NEW] Add ability to CRUD snapshots of start lists (issue 36)</li>
+<li>[UPDATE] Add columns stable, email to Sporti import function</li>
+<li>[UPDATE] Add switch for secretary mode to competition setup page (issue 398)</li>
+<li>[FIX] Start lists may not be suggested correctly after the first time they are published (issue 216)</li>
+<li>[FIX] YHE: Error when no judge assigned (issue 467)</li>
+<li>[FIX] Reordering judges works as expected</li>
+</ul>
+<p>Version 2.4 was released on September 1, 2019.</p>
+<h2 id="icetest-ng-23">IceTest-NG 2.3<a class="headerlink" href="#icetest-ng-23" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Add comments to the secretary function</li>
+<li>[NEW] Trigger country-specific settings upon event creation (issue 406)</li>
+<li>[NEW] New column in Combinations overview with testlist (issue 413)</li>
+<li>[NEW] Enable timer for Gædingakeppni tests (issue 446)</li>
+<li>[FIX] Tiebreak causes ACTIVE state on ticker site (issue 440)</li>
+<li>[FIX] Pre-fill “0” for all future sections when a rider is entered as a NOSHOW (issue 444)</li>
+<li>[FIX] PP1 “missing“ judge (issue 438)</li>
+<li>[FIX] Correctly set multistarter status in heated entries (issue 441)</li>
+<li>[FIX] Updating testcode fails (issue 380)</li>
+<li>[FIX] Batch print of judge cards doesn't not set default judges (issue 433)</li>
+<li>[FIX] Long colour names not shown in start lists (issue 449)</li>
+<li>[UPDATE] Limit derived results templates to official and local ones</li>
+</ul>
+<p>Version 2.3 was released on July 2, 2019.</p>
+<h2 id="icetest-ng-22">IceTest-NG 2.2<a class="headerlink" href="#icetest-ng-22" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Support column ‚phonemobile‘ in Sporti import (issue 422)</li>
+<li>[NEW] Startlists: Add the group size to the toolbar</li>
+<li>[NEW] Print a grid-style judge card for tests with only once section</li>
+<li>[FIX] Cannot enter marks if test name has a single quote / apostrophe (issue 428)</li>
+<li>[FIX] Fix corner case in calculation of available spots in GK BFIN</li>
+<li>[FIX] Correctly detect when in a non-fullpage modal (issue 425)</li>
+<li>[FIX] Secretary Mode: Entering 0 (issue 424)</li>
+<li>[FIX] xFIN phase state after PREL (issue 426)</li>
+<li>[FIX] AFIN missing participants after completed BFIN (issue 427)</li>
+<li>[FIX] Multi-form printing (start lists and judge cards) confused by schedule order (issue 432)</li>
+<li>[FIX] Can't set groupsize for heated tests on startlist.cfm (issue 436)</li>
+<li>[FIX] Push startlists for heated tests to ticker site</li>
+<li>[UPDATE] Allow judges to be assigned to test phases when the start list is LOCKED</li>
+<li>[UPDATE] Startlists: use horizontal collapse in the footer to declutter the page by hiding the toolbar</li>
+<li>[UPDATE] Filter out funny chars in testcodes (issue 429)</li>
+<li>[UPDATE] Improve docs on Secretary Mode</li>
+<li>[UPDATE] Update XLS export component</li>
+<li>[UPDATE] Improve current ranking view in speaker screen, marks entry screen</li>
+</ul>
+<p>Version 2.2 was released on May 23, 2019.</p>
+<h2 id="icetest-ng-21">IceTest-NG 2.1<a class="headerlink" href="#icetest-ng-21" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Apply catalog updates to tests (issue 421)</li>
+<li>[NEW] Allow the rider to be changed in Gaedingakeppni finals</li>
+<li>[NEW] Support for new Gaedingakeppni tests GDY-A and GDY-B</li>
+<li>[FIX] Tests with apostrophe in the testname cannot show startlist (issue 420)</li>
+<li>[FIX] Automatic age assignment does not assign Junior riders (issue 414)</li>
+<li>[FIX] Import of X-level tests for DE/CH/NL competitions</li>
+<li>[UPDATE] Improve judge cards for group tests with more than 5 sections</li>
+<li>[UPDATE] Support for external CSS in video wall output (issue 399)</li>
+<li>[UPDATE] Introducing Quick Controls for video wall features (thanks to Andreas Hejndorf)</li>
+<li>[UPDATE] Import Sporti files without starting numbers (STA) (issue 417)</li>
+<li>[UPDATE] Handle dis-/enabling of CFin and/or BFin for active test (issue 418)</li>
+</ul>
+<p>Version 2.1 was released on April 19, 2019.</p>
+<h2 id="icetest-ng-20">IceTest-NG 2.0<a class="headerlink" href="#icetest-ng-20" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Start lists can now actively be locked by the user</li>
+<li>[NEW] Add a new judge level called "local" (issue 411)</li>
+<li>[NEW] Notify users when getting EventAdmin permission for competitions in Denmark (issue 403)</li>
+<li>[NEW] Allow signup systems used in CH/DE/NL to transfer competition data to NG</li>
+<li>[NEW] Print certificates for Young Horse Evaluations (IPZV)</li>
+<li>[NEW] Publish documentation on importing Sporti files (issue 405)</li>
+<li>[UPDATE] Improve Young Horse Evaluations</li>
+<li>[UPDATE] Tölt in Harmony tests are now known as Figure Tests FG1/FG2/FG3</li>
+<li>[FIX] Printing vet-check forms with diagrams</li>
+<li>[FIX] Ranking calculation for Young Horse Evaluations</li>
+<li>[FIX] Removing tests not working (issue 409)</li>
+<li>[FIX] Catalog refresh fails for P2 (issue 412)</li>
+</ul>
+<p>Version 2.0 was released on March 31, 2019.</p>
+<h2 id="icetest-ng-019">IceTest-NG 0.19<a class="headerlink" href="#icetest-ng-019" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Import participant data from CSV files (generated by Sporti, IceTest Classic) (issue 384)</li>
+<li>[NEW] Introducing Young Horse Evaluations</li>
+<li>[NEW] Attribute marks to a different judge (issue 252)</li>
+<li>[NEW] Test catalog XML now supports SECR phase (see issue 389)</li>
+<li>[FIX] SetDefaultJudges can block secretary marks feature (issue 389)</li>
+<li>[UPDATE] Improve start list printing when preliminaries and finals have different sections</li>
+<li>[UPDATE] Improve secretary features when preliminaries and finals have different sections</li>
+</ul>
+<p>Version 0.19 was released on January 7, 2019.</p>
+<h2 id="icetest-ng-018">IceTest-NG 0.18<a class="headerlink" href="#icetest-ng-018" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Make carrying judges over optional (issue 387)</li>
+<li>[FIX] Turning off test phases (competitions -&gt; edit test list) assumes the current competition (issue 385)</li>
+<li>[FIX] Editing times in the schedule (issue 358)</li>
+<li>[FIX] Ticker has no start lists for pace disciplines (issue 382)</li>
+<li>[UPDATE] Improve local storage use for mark input by secretaries</li>
+<li>[FIX] Handle club membership data correctly when not using a web service to look up memberships</li>
+</ul>
+<p>Version 0.18 was released on September 28, 2018.</p>
+<h2 id="icetest-ng-017">IceTest-NG 0.17<a class="headerlink" href="#icetest-ng-017" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[FIX] Removing or moving judges can prevent proper calculation of marks (issue 379)</li>
+<li>[FIX] Stop deleting completed phases from the schedule (issue 378)</li>
+<li>[FIX] Improve rank assignment for very slow times in time-based tests (issue 377)</li>
+<li>[FIX] Cannot unschedule phase if all have been scheduled (issue 371)</li>
+<li>[FIX] Save marks correctly in case of a lost shoe (issue 366)</li>
+<li>[FIX] Always advance winner of CFIN to BFIN (issue 365)</li>
+<li>[FIX] Fix the selection of a specific competition from the breadcrumb</li>
+<li>[FIX] Drag/drop behaves as expected in start lists that have breaks (issue 363)</li>
+<li>[UPDATE] Make the index page look a little nicer</li>
+<li>[UPDATE] Visually group the test catalogs on the left side of the panel when editing the tests in a given competition</li>
+<li>[UPDATE] Improve mark input for judges</li>
+<li>[NEW] remove a phase from the schedule if it is turned off in the competition test list (issue 372)</li>
+<li>[NEW] Do not remove judges from a test phase if marks exist (issue 370)</li>
+<li>[NEW] Make speaker phase state change messages into links to the appropriate speaker page (issue 375)</li>
+<li>[NEW] Display a Reconnect button on the secretary page when the websocket disconnects</li>
+<li>[NEW] Improve new menu controls on small devices (issue 364)</li>
+<li>[NEW] Speed up generation of overview PDF</li>
+<li>[NEW] Allow derived results to be dropped (issue 348)</li>
+<li>[NEW] Add reports on products sold for a competition</li>
+</ul>
+<p>Version 0.17 was released on September 5, 2018.</p>
+<h2 id="icetest-ng-016">IceTest-NG 0.16<a class="headerlink" href="#icetest-ng-016" title="Permanent link">&para;</a></h2>
+<ul>
+<li>[NEW] Support mark input for judges' secretaries.</li>
+<li>[NEW] Add support for multiple video wall outputs (e.g. video wall and backstage monitor)</li>
+<li>[UPDATE] Gaedingakeppni: 7 AFIN, but 8 BFIN participants</li>
+<li>[FIX] Withdrawal from AFIN after BFIN took place (issue 357)</li>
+</ul>
+<p>Version 0.16 was released on July 7, 2018.</p>
+<hr />
+<p><em>$Author$</em><br />
+<em>$Rev$</em><br />
+<em>$Date$</em>  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../equipment-check-app/" class="btn btn-neutral float-left" title="Equipment Check App"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../equipment-check-app/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
