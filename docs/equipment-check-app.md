@@ -6,6 +6,7 @@ The app will document all checks and transfer the findings back to the IceTest-N
 ## Supported Checks
 Currently, the app can be used to document the following checks according to the FEIF Rules & Regulations:
 
+*   Arrival check (normally only used at the World Championships)
 *   Fit-to-compete check (G5.1)
 *   Equipment check / exit check (G5.1)
 *   Shoeing check (G6.5)
@@ -39,6 +40,20 @@ Please refer to the training section below to learn how to practice with the app
 
 
 ## Conducting Checks
+
+### Arrival 
+
+This checks is usually done by a veterinarian as soon as the horse arrives at the competition grounds.  
+
+This is a very minimal check to confirm the horse's identity, vaccination history, temperature logging records and very basic health information.
+
+![Arrival check screenshot.](equip_arrival.jpeg)
+
+The first step is to scan the horses's microchip to confirm the chip matches the information at the top of the screen.   The veterinarian uses the drop-down option to indicate the outcome of the microchip scan.
+
+The veterinarian then enters the temperature, respirations, and pulse observations.  The three check sliders are used to confirm the general health of the horse, the vaccination schedule and its record in the passport, and that a correct temperature log is present.   In rare cases, the verterinarian can use the comment box to record any other observations.  This, normally, would only happen if a horse is not accepted into the competition grounds.
+
+Finally, the veterinarian completes the arrival using the Accepted or Rejected button to capture the overall conclusion of the arrival process.
 
 ### Fit-to-Compete
 
