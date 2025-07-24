@@ -59,9 +59,17 @@ Finally, the veterinarian completes the arrival using the Accepted or Rejected b
 
 This check is usually done by a veterinarian after arrival of the horse at the competition grounds. 
 
+The team can find a list of all starting combinations in the **Fit to Compete** test in the list of all the test phases at the competition.  The list shows all starting combinations together with an indication of which have been checked.  You may also use the search feature at the top of the screen to quickly find a combination based on the Starting Number, Rider, or Horse.
+
+![List of starters for Fit to Compete](equip_fit_list.PNG)
+
 After selecting the horse from the list of participating horses, its pulse, respiration rate, and temperature can be entered along with additional comments. In case any wounds are found, they can be documented as described in the [Equipment Check](#equipment) section.
 
-Possible outcomes are "Accepted", "Recheck", and "Rejected".
+![Fit to compete sample.](equip_fit.jpeg)
+
+Possible outcomes are "Accepted", "Recheck", and "Rejected".  If a horse is **accepted** the status will change in IceTest from ENTERED to READY.  If a horse is set for **recheck** it will appear in the **Fit to Compete RECHECK** list automatically.  If a horse is **rejected** the status in IceTest will be set to CANCELLED.  
+
+The competition office should be informed about any horses which are **rejected** so they may make sure the test entries and any charges related to the competition are handled correctly.
 
 ### Shoeing
 
@@ -69,17 +77,23 @@ The shoeing check is sometimes done before the horse starts for the first time i
 
 After selecting the horse from the list of participating horses, a variety of items can be documented. This includes the length of all four toes, the thickness of the shoes, the presence of studs, cores, pads and rings. The official can also take pictures of the shoeing and add comments.
 
-Possible outcomes are "Accepted", "Recheck", and "Rejected".
+![Shoe check example.](equip_shoe.jpeg)
+
+Possible outcomes are "Accepted", "Recheck", and "Rejected".  If a horse is selected for **recheck** it will automatically be placed in the list of shoeing rechecks.  Findings of **accepted** or **rejected** are not passed along to IceTest.  If a horse is removed from the competition entirely because of unacceptable shoeing, the competition office must get involved to make the necessary changes in IceTest.
 
 ### Equipment
 
 Equipment or exit checks are done right after the horse has left the track after the class. Both the equipment used and the horse itself are checked.
 
-The app will offer all start lists of the competition by mentioning its test code and phase ("V1 PREL", "T3 AFIN", and so on). A start list will show a random selection of horses to be checked, but you can flip the "Show all?" switch at the top to see all horses. In addition, you can filter the list by entering the name of the horse or rider in the search field.
+The app will offer all start lists of the competition by mentioning its test code and phase ("V1 PREL", "T3 AFIN", and so on). A start list will show a random selection of horses to be checked, but you can flip the "Show all?" switch at the top to see all horses. In addition, you can filter the list by Starting Number, the name of the horse, or the rider in the search field.
 
-After selecting a horse from the list, a variety of items can be documented. This includes details about the bit, the bridle, boots, and other protective equipment. There's also room for notes on the shoeing.
+After selecting a horse combination the list, a variety of items can be documented. This includes details about the bit, the bridle, boots, and other protective equipment. There's also room for notes on the shoeing.
 
-If any injuries are found, they can be documented as well: 
+![Equipment check -- top half](equip_equip1.jpeg)
+
+If any injuries are found, they can be documented as well toward the bottom of the screen:
+
+![Equipment check -- top half](equip_equip2.jpeg)
 
 - Begin by selecting either the "Mouth" or "Leg" button. 
 - Locate the position of the wound by tapping on the corresponding area of the horse image.
@@ -96,7 +110,7 @@ In the upper right corner, there are two round icons. The first one brings up an
 
 ### Identification
 
-The identification check is part of the Fit-to-Compete and Equipment checks mentioned above. It's a simple check to verify the identity of the horse. 
+The identification check is part of the [Arrival](#arrival), [Fit to Compete](#fit-to-compete) and [Equipment](#equipment) checks mentioned above. It's a simple check to verify the identity of the horse by microchip.
 
 The app shows the microchip number, FEIF-ID, and name of the selected horse. The official can check the microchip number with a microchip reader and compare the reading to the chip number shown in the app. Then, they can confirm/unconfirm the identity by selecting "Success" or "Failure" from the dropdown menu.
 
