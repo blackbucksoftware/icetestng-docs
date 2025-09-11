@@ -1,5 +1,23 @@
 # Release Notes
 
+## IceTest-NG 2.30.0
+* [UPDATE]: Refactor the ParticipantSVC function to disqualify a rider from a test and add a variant to eliminate the rider.
+* [NEW]: Add Slovenia timezone info.
+* [NEW]: Add podium template for icecompass graphics.
+* [FIX]: Assign cards to the correct judge in screen graphics.
+* [FIX]: Sorting of race (time based) results.
+* [FIX]: Correctly handle multiple cards shown by a single judge when printing results reports.
+
+## IceTest-NG 2.29.0
+* [NEW]: Add support for showing FIZO results from WorldFengur on the video wall.
+* [FIX]: Assignment of armband colors when building final start lists.
+* [FIX]: Don't report CFIN to the WorldRanking.
+* [FIX]: Don't count withdrawals when calculating times.
+
+## IceTest-NG 2.28.0
+* [UPDATE]: Enable music playlists for all competitions.
+* [FIX]: Number of digits used in judge score rounding for Gaedinga Tölt.
+
 ## IceTest-NG 2.27.0
 * [NEW]: Add start list with microchip column (startlist_microchip).
 * [UPDATE]: Update Vet Check Forms for 2025.
