@@ -17,7 +17,7 @@ The following prerequisites must be met to use the Equipment Check App:
 
 *   You need to have a user account in IceTest-NG with the role "Judge" assigned.
 *   You need to have a smartphone or tablet device running iOS or Android.
-*   The competition must be taking place in Denmark, Germany, Switzerland, or under direct responsibility of FEIF (for example the World Championships).
+*   The competition must be taking place in Austria, Denmark, Germany, Switzerland, or under direct responsibility of FEIF (for example the World Championships).
 
 ## Installation
 **iPhone / iPad** users can download the app from the App Store by visiting the following link: [Equipment Check App for iOS](https://apps.apple.com/de/app/icetest-equipment/id6612007738).
