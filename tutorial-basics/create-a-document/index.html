@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/tutorial-basics/create-a-document/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Create a Document - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create a Document";
+        var mkdocs_page_input_path = "tutorial-basics/create-a-document.md";
+        var mkdocs_page_url = "/icetestng-docs/tutorial-basics/create-a-document/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Create a Document</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/tutorial-basics/create-a-document.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="create-a-document">Create a Document<a class="headerlink" href="#create-a-document" title="Permanent link">&para;</a></h1>
+<p>Documents are <strong>groups of pages</strong> connected through:</p>
+<ul>
+<li>a <strong>sidebar</strong></li>
+<li><strong>previous/next navigation</strong></li>
+<li><strong>versioning</strong></li>
+</ul>
+<h2 id="create-your-first-doc">Create your first Doc<a class="headerlink" href="#create-your-first-doc" title="Permanent link">&para;</a></h2>
+<p>Create a Markdown file at <code>docs/hello.md</code>:</p>
+<p>```md title="docs/hello.md"</p>
+<h1 id="hello">Hello<a class="headerlink" href="#hello" title="Permanent link">&para;</a></h1>
+<p>This is my <strong>first Docusaurus document</strong>!</p>
+<div class="codehilite"><pre><span></span><code><span class="n">A</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">document</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">available</span><span class="w"> </span><span class="k">at</span><span class="w"> </span><span class="err">[</span><span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">hello</span><span class="err">]</span><span class="p">(</span><span class="n">http</span><span class="o">://</span><span class="n">localhost</span><span class="o">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">hello</span><span class="p">).</span>
+
+<span class="c1">## Configure the Sidebar</span>
+
+<span class="n">Docusaurus</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="o">**</span><span class="n">creates</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">sidebar</span><span class="o">**</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n n-Quoted">`docs`</span><span class="w"> </span><span class="n">folder</span><span class="p">.</span>
+
+<span class="k">Add</span><span class="w"> </span><span class="n">metadata</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">customize</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">sidebar</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">position</span><span class="o">:</span>
+
+<span class="n n-Quoted">`</span><span class="n n-Quoted n-Quoted-Escape">``</span><span class="n n-Quoted">md title=&quot;docs/hello.md&quot; {1-4}</span>
+<span class="n n-Quoted">---</span>
+<span class="n n-Quoted">sidebar_label: &#39;Hi!&#39;</span>
+<span class="n n-Quoted">sidebar_position: 3</span>
+<span class="n n-Quoted">---</span>
+
+<span class="n n-Quoted"># Hello</span>
+
+<span class="n n-Quoted">This is my **first Docusaurus document**!</span>
+</code></pre></div>
+
+<p>It is also possible to create your sidebar explicitly in <code>sidebars.js</code>:</p>
+<p><code>js title="sidebars.js"
+module.exports = {
+  tutorialSidebar: [
+    'intro',
+    // highlight-next-line
+    'hello',
+    {
+      type: 'category',
+      label: 'Tutorial',
+      items: ['tutorial-basics/create-a-document'],
+    },
+  ],
+};</code></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
