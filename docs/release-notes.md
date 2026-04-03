@@ -1,5 +1,16 @@
 # Release Notes
 
+## IceTest-NG 2.32.0
+* [NEW]: Let users assign judges via time schedule upload (XLSX file).
+* [NEW]: Judges in tests based on TR1 can be assigned to specific sections of the test.
+* [NEW]: Users can edit the sections (number, description) of tests based on TR1.
+* [NEW]: Let judges add comments to any cards given. Cards can also be exported in XLSX and JSON format.
+* [NEW]: Ask for confirmation before cancelling a participant altogether.
+* [NEW]: Add support for penalty times in all time-based tests.
+* [NEW]: Users can enter successful vaccination / horse passport checks, either through the Equipment Check App or via the participant's page.
+* [UPDATE]: Detect when the same judge logs in from multiple devices and log them out of the older session.
+* [UPDATE]: Tweak the design of Secretary mode on mobile devices.
+
 ## IceTest-NG 2.30.0
 * [UPDATE]: Refactor the ParticipantSVC function to disqualify a rider from a test and add a variant to eliminate the rider.
 * [NEW]: Add Slovenia timezone info.
