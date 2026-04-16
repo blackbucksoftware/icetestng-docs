@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/xml-definitions/define-a-ranking/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Defining Derived Results - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Defining Derived Results";
+        var mkdocs_page_input_path = "xml-definitions/define-a-ranking.md";
+        var mkdocs_page_url = "/icetestng-docs/xml-definitions/define-a-ranking/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Defining Derived Results</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/xml-definitions/define-a-ranking.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="defining-derived-results">Defining Derived Results<a class="headerlink" href="#defining-derived-results" title="Permanent link">&para;</a></h1>
+<p>This document details how to use Derived Results and how you can define your own Derived Results in IceTest NG.</p>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
+<p>In IceTest NG, a "Derived Result" is any result that is <strong>automatically calculated</strong> from one or more results of the same competition. Derived Results (also being called "Combination Rankings" sometimes) can be used to achieve the following:</p>
+<ul>
+<li>merge results from different tests, for example provide a combined total ranking for two separate T7 classes</li>
+<li>filter results, for example provide a ranking of a V5 class only for members of a certain club</li>
+<li>combine results, for example calculate an overall score for riders who participated in a tölt and a gaited class</li>
+</ul>
+<h2 id="adding-derived-results-to-an-event">Adding Derived Results to an event<a class="headerlink" href="#adding-derived-results-to-an-event" title="Permanent link">&para;</a></h2>
+<p>Just like tests, Derived Results can be added either from an official test catalog (provided by FEIF or a national association) or from a custom XML file prepared by the user.</p>
+<p>In order to add a Derived Result, go to the <strong>Tests</strong> page and click the competition name in the bread crumb menu on the top of the list to open the Competition Setup popup. </p>
+<ol>
+<li>Go to the <strong>Derived Results</strong> tab.</li>
+<li>The left column shows the available Derived Results.</li>
+<li>Drag the desired Derived Result to the right column.</li>
+<li>Close the overlay to save your changes.</li>
+</ol>
+<p>See section <a href="#xml">XML description</a> for details on building your own custom Derived Results in XML.</p>
+<h2 id="working-with-derived-results">Working with Derived Results<a class="headerlink" href="#working-with-derived-results" title="Permanent link">&para;</a></h2>
+<p>Once a Derived Result has been added to the competition, it will be listed on the <strong>Tests</strong> page. Unlike the regular tests, it will feature only a results (flag) icon.</p>
+<p>Derived Results are updated automatically. Every time a result is entered for a test that is counting towards a Dervied Result, the calculation will be updated both in IceTestNG and on the ticker website.</p>
+<p>If a competition makes use of age classes, Derived Results will feature separate rankings for both all age classes combined and every single age class.</p>
+<h2 id="defining-custom-derived-results">Defining custom Derived Results <a name="xml"></a><a class="headerlink" href="#defining-custom-derived-results" title="Permanent link">&para;</a></h2>
+<p>Users can create their own Derived Results as part of an XML file that can be imported via the <strong>Import Local Tests</strong> page.</p>
+<p>The general structure of such a file is as follows:</p>
+<p>```jsx title="davos2023.xml"</p>
+<?xml version="1.0" encoding="utf-8"?>
+<p><rules xmlns:data="x-schema:idSchema.xml" xmlns:ref="x-schema:refSchema.xml" xmlns="http://feif.org/icetestng"></p>
+<p><source>LOCAL</source>
+  <year>2019</year>
+  <revision>1</revision></p>
+<p><derived_results>
+    <derived_result>
+      <resultcode>CI</resultcode>
+      <name>Icelandic Combination</name>
+      <description></description>
+      <result_type>STA</result_type>
+      <blocks>
+        <block>
+          <name>Tölt</name>
+          <required>one</required>
+          <marks>1</marks>
+          <factor>1</factor>
+          <tests>
+            <test>
+              <testcode>T1</testcode>
+              <phase>PREL</phase>
+              <factor>1</factor>
+            </test>
+            <test>
+              <testcode>T2</testcode>
+              <phase>PREL</phase>
+              <factor>1</factor>
+            </test>
+          </tests>
+        </block>
+        <block>
+          <name>Gaited</name>
+          <required>one</required>
+          <factor>1</factor>
+          <marks>1</marks>
+          <tests>
+            <test>
+              <testcode>F1</testcode>
+              <phase>PREL</phase>
+              <factor>1</factor>
+            </test>
+            <test>
+              <testcode>V1</testcode>
+              <phase>PREL</phase>
+              <factor>1</factor>
+            </test>
+          </tests>
+        </block>
+      </blocks>
+    </derived_result>
+  </derived_results></p>
+<!-- The next tags are used to define custom tests; they are not needed to define Derived Results -->
+<p><tests></tests>
+  <phase_defs></phase_defs>
+  <sections></sections>
+  <results></results>
+  <judges></judges>
+  <conversions></conversions>
+</rules></p>
+<div class="codehilite"><pre><span></span><code><span class="n">The</span><span class="w"> </span><span class="n">sample</span><span class="w"> </span><span class="n">XML</span><span class="w"> </span><span class="n">above</span><span class="w"> </span><span class="n">shows</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">definition</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s2">&quot;Icelandic Combination&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">ranking</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">combines</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tölt</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">either</span><span class="w"> </span><span class="n">T1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">T2</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">gaited</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="p">(</span><span class="n">F1</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">V1</span><span class="p">)</span><span class="o">.</span>
+<span class="n">The</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">could</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">course</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">definitions</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">several</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Results</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">well</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">competition</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">custom</span><span class="w"> </span><span class="n">tests</span><span class="o">.</span>
+
+<span class="n">Let</span><span class="s1">&#39;s take a look at the different parts:</span>
+
+<span class="c1">### Header section</span>
+
+<span class="n">The</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">XML</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">three</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">level</span><span class="p">:</span>
+
+<span class="o">|</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Description</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Example</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-----------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-------</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Must</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="o">**</span><span class="n">LOCAL</span><span class="o">**</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">user</span><span class="o">-</span><span class="n">defined</span><span class="w"> </span><span class="n">XML</span><span class="w"> </span><span class="n">files</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">source</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">LOCAL</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">source</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">year</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">The</span><span class="w"> </span><span class="n">year</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">competition</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">year</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mi">2019</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">year</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">revision</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Revision</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="w"> </span><span class="n">In</span><span class="w"> </span><span class="n">case</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">changed</span><span class="o">/</span><span class="n">corrected</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">revision</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">increased</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">one</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">revision</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mi">1</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">revision</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span>
+
+<span class="c1">### &amp;lt;derived\_results&amp;gt; section</span>
+
+<span class="n">The</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">derived_results</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">contains</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">definitions</span><span class="o">.</span><span class="w"> </span><span class="n">Each</span><span class="w"> </span><span class="n">definition</span><span class="w"> </span><span class="n">resides</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">opening</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">derived_result</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">tags</span><span class="o">.</span><span class="w"> </span>
+<span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">derived_result</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">section</span><span class="p">:</span>
+
+<span class="o">|</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Description</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Example</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-----------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-------</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">resultcode</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">The</span><span class="w"> </span><span class="n">short</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Result</span><span class="p">,</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="p">(</span><span class="n">T1</span><span class="p">,</span><span class="w"> </span><span class="n">F1</span><span class="p">,</span><span class="w"> </span><span class="n">etc</span><span class="o">.</span><span class="p">)</span><span class="o">.</span><span class="w"> </span><span class="n">Maximum</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">characters</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">resultcode</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">IC</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">resultcode</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Result</span><span class="o">.</span><span class="w"> </span><span class="n">Maximum</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">characters</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">name</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">Icelandic</span><span class="w"> </span><span class="n">Combination</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">name</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">A</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Result</span><span class="o">.</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">empty</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">description</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">Tölt</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Gaited</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">combined</span><span class="o">.&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">description</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">result_type</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|**</span><span class="n">STA</span><span class="o">**</span><span class="w"> </span><span class="o">&amp;</span><span class="c1">#124; **TEAM**. Required.&lt;br /&gt;STA: Results are calculated per participant.&lt;br /&gt;TEAM: Results are calculated per team. | _&amp;lt;result\_type&amp;gt;STA&amp;lt;/result\_type&amp;gt;_ |</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">required_club</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Limits</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">calculation</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">participants</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">members</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">club</span><span class="w"> </span><span class="n">named</span><span class="w"> </span><span class="n">here</span><span class="o">.</span><span class="w"> </span><span class="n">Optional</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">required</span>\<span class="n">_club</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">Fákur</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">required</span>\<span class="n">_club</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+
+
+<span class="c1">### &amp;lt;blocks&amp;gt; section</span>
+<span class="n">Each</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Result</span><span class="w"> </span><span class="n">definition</span><span class="w"> </span><span class="n">consists</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span><span class="err">`</span><span class="o">.</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">participant</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">team</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="n">calculated</span><span class="o">.</span><span class="w"> </span><span class="n">These</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="n">inside</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">block</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">section</span><span class="p">:</span>
+
+<span class="o">|</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Description</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Example</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-----------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-------</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">The</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="o">.</span><span class="w"> </span><span class="n">Maximum</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="n">characters</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">name</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">Tölt</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">name</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">required</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|**</span><span class="n">ONE</span><span class="o">**</span><span class="w"> </span><span class="o">&amp;</span><span class="c1">#124; **ALL** &amp;#124; **ANY**. Required.&lt;br /&gt;ONE: Only one result (the best) is needed to qualify for the combination.&lt;br /&gt;ALL: Results from all tests in this block are required to qualify.&lt;br /&gt;ANY: All results which are available will count, but one result is sufficient. | _&amp;lt;required&amp;gt;ONE&amp;lt;/required&amp;gt;_ | </span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">marks</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">marks</span><span class="w"> </span><span class="n">considered</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">block</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">marks</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mi">1</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">marks</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">marks_strict</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|**</span><span class="bp">true</span><span class="o">**</span><span class="w"> </span><span class="o">&amp;</span><span class="c1">#124; **false**&lt;br /&gt; If set to true the number of marks specified for the block is exact. if omitted (or false) the number of marks is a maximal value with missing marks counting as “0”. Optional. | _&amp;lt;marks\_strict&amp;gt;1&amp;lt;/marks\_strict&amp;gt;_ |</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Multiplication</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">applied</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">calculating</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">overall</span><span class="w"> </span><span class="n">derived</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="w"> </span><span class="n">Accepts</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mf">9.99</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">factor</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mf">1.0</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">factor</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+
+
+<span class="c1">### &amp;lt;tests&amp;gt; section</span>
+<span class="n">Every</span><span class="w"> </span><span class="n">block</span><span class="w"> </span><span class="n">contains</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">least</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="n">usually</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">test</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">describing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">belongs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">meant</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">contribute</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Derived</span><span class="w"> </span><span class="n">Result</span><span class="o">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">describe</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">test</span><span class="o">&gt;</span><span class="err">`</span><span class="p">:</span>
+
+<span class="o">|</span><span class="w"> </span><span class="n">Tag</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Description</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Example</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-----------</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">-------</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">testcode</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">The</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">whose</span><span class="w"> </span><span class="n">results</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">considered</span><span class="o">.</span><span class="w"> </span><span class="n">Maximum</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">characters</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.&lt;</span><span class="n">br</span><span class="w"> </span><span class="o">/&gt;**%**</span><span class="w"> </span><span class="n">might</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">wildcard</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">code</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">testcode</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">T1</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">testcode</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">phase</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|**</span><span class="n">PREL</span><span class="o">**</span><span class="w"> </span><span class="o">&amp;</span><span class="c1">#124; **FIN** &amp;#124; **CFIN** &amp;#124; **BFIN** &amp;#124; **AFIN**. Required.&lt;br /&gt;The phase of the indicated test code whose results should be considered. | _&amp;lt;phase&amp;gt;PREL&amp;lt;/phase&amp;gt;_ |</span>
+<span class="o">|</span><span class="w"> </span><span class="err">`</span><span class="o">&lt;</span><span class="n">factor</span><span class="o">&gt;</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="n">Multiplication</span><span class="w"> </span><span class="n">factor</span><span class="w"> </span><span class="n">applied</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">calculating</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">block</span><span class="o">.</span><span class="w"> </span><span class="n">Accepts</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="mf">0.01</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="mf">9.99</span><span class="o">.</span><span class="w"> </span><span class="n">Required</span><span class="o">.</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">_</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">factor</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="mf">1.0</span><span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="o">/</span><span class="n">factor</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span>
+
+
+
+
+<span class="n">Add</span><span class="w"> </span><span class="o">**</span><span class="n">Markdown</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">React</span><span class="o">**</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="err">`</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">**</span><span class="n">standalone</span><span class="w"> </span><span class="n">page</span><span class="o">**</span><span class="p">:</span>
+
+<span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">js</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="err">`</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="err">`</span>
+<span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="o">/</span><span class="n">foo</span><span class="o">.</span><span class="n">md</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="err">`</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">foo</span><span class="err">`</span>
+<span class="o">-</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span><span class="n">bar</span><span class="o">.</span><span class="n">js</span><span class="err">`</span><span class="w"> </span><span class="err">→</span><span class="w"> </span><span class="err">`</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="o">/</span><span class="n">foo</span><span class="o">/</span><span class="n">bar</span><span class="err">`</span>
+
+<span class="p">:::</span><span class="n">tip</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="n">tip</span>
+
+<span class="n">Use</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">awesome</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">option</span>
+
+<span class="p">:::</span>
+
+<span class="p">:::</span><span class="n">danger</span><span class="w"> </span><span class="n">Take</span><span class="w"> </span><span class="n">care</span>
+
+<span class="n">This</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">dangerous</span>
+
+<span class="p">:::</span>
+
+<span class="p">:::</span><span class="n">warning</span><span class="w"> </span><span class="n">My</span><span class="w"> </span><span class="n">tip</span>
+
+<span class="n">Use</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">awesome</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">option</span>
+
+<span class="p">:::</span>
+
+<span class="p">:::</span><span class="n">info</span><span class="w"> </span><span class="n">Take</span><span class="w"> </span><span class="n">care</span>
+
+<span class="n">This</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">dangerous</span>
+
+<span class="p">:::</span>
+
+<span class="c1">## Create your first React Page</span>
+
+<span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="err">`</span><span class="n">src</span><span class="o">/</span><span class="n">pages</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">react</span><span class="o">-</span><span class="n">page</span><span class="o">.</span><span class="n">js</span><span class="err">`</span><span class="p">:</span>
+
+<span class="err">```</span><span class="n">jsx</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;src/pages/my-react-page.js&quot;</span>
+<span class="n">import</span><span class="w"> </span><span class="n">React</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="n">import</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="s1">&#39;@theme/Layout&#39;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">function</span><span class="w"> </span><span class="n">MyReactPage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="n">Layout</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">My</span><span class="w"> </span><span class="n">React</span><span class="w"> </span><span class="n">page</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span><span class="n">This</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">React</span><span class="w"> </span><span class="n">page</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+<span class="w">    </span><span class="o">&lt;/</span><span class="n">Layout</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>A new page is now available at <a href="http://localhost:3000/my-react-page">http://localhost:3000/my-react-page</a>.</p>
+<h2 id="create-your-first-markdown-page">Create your first Markdown Page<a class="headerlink" href="#create-your-first-markdown-page" title="Permanent link">&para;</a></h2>
+<p>Create a file at <code>src/pages/my-markdown-page.md</code>:</p>
+<p>```mdx title="src/pages/my-markdown-page.md"</p>
+<h1 id="my-markdown-page">My Markdown page<a class="headerlink" href="#my-markdown-page" title="Permanent link">&para;</a></h1>
+<p>This is a Markdown page
+```</p>
+<p>A new page is now available at <a href="http://localhost:3000/my-markdown-page">http://localhost:3000/my-markdown-page</a>.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
