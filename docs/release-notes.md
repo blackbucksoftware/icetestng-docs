@@ -1,5 +1,11 @@
 # Release Notes
 
+## IceTest-NG 2.33.0
+* [NEW]: Self-Checkin calculation now prioritizes participants whose horses had their passports checked successfully in the last 100 days.
+* [NEW]: The new menu item "Reports" - "Planned Starts" lets you view a list of horses that might have too many starts planned.
+* [FIX]: The participants' list reflects any updates made to a participant right away. 
+* [FIX]: Judges can access completed tests again.
+
 ## IceTest-NG 2.32.0
 * [NEW]: Let users assign judges via time schedule upload (XLSX file).
 * [NEW]: Judges in tests based on TR1 can be assigned to specific sections of the test.
