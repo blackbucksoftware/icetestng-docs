@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/tutorial-judges/03_group_tests/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Group Tests - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Group Tests";
+        var mkdocs_page_input_path = "tutorial-judges/03_group_tests.md";
+        var mkdocs_page_url = "/icetestng-docs/tutorial-judges/03_group_tests/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Group Tests</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/tutorial-judges/03_group_tests.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="group-tests">Group Tests<a class="headerlink" href="#group-tests" title="Permanent link">&para;</a></h1>
+<p>How to enter marks and comments for riders in group tests like T3, F2, and so on.</p>
+<h3 id="1-select-test">1. Select test<a class="headerlink" href="#1-select-test" title="Permanent link">&para;</a></h3>
+<p><img alt="Step 1 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/d8682f4c-144d-4d89-a7a7-12d6c94b77b0/b087d01b-a594-41b7-803d-9370be4d80ba.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=42&amp;mark-y=307&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz05NCZoPTM4JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+<h3 id="2-select-group">2. Select group<a class="headerlink" href="#2-select-group" title="Permanent link">&para;</a></h3>
+<p>Click on one little blue track icon in the Grp. column for the group that is coming next.</p>
+<ul>
+<li>
+<p>Selecting one rider in the Grp. column will automatically select the whole group.</p>
+</li>
+<li>
+<p>The selected rider(s) appear highlighted in green.
+<img alt="Step 2 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/1b96b30f-9830-4a13-acd0-ea94d0fc1ff9/dbcbbbff-4e89-4da3-a1b6-77b64c27f7de.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.4428&amp;fp-y=0.3515&amp;fp-z=2.0860&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=536&amp;mark-y=333&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz00NCZoPTQ0JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+</li>
+</ul>
+<h3 id="3-deselect-single-rider">3. Deselect single rider<a class="headerlink" href="#3-deselect-single-rider" title="Permanent link">&para;</a></h3>
+<p>If one rider of the group is not coming you can deselect that rider by clicking the track icon in the STA column.
+<img alt="Step 3 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/d3099c4b-490c-473a-85dc-98b130c185d5/ad701945-6161-4267-a51c-2f59829a4c85.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5993&amp;fp-y=0.3859&amp;fp-z=2.0860&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=652&amp;mark-y=351&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz00NCZoPTQ0JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+<h3 id="4-send-riders-to-track">4. Send Riders to Track<a class="headerlink" href="#4-send-riders-to-track" title="Permanent link">&para;</a></h3>
+<p>Scroll down to the bottom of the list and click "Send Riders to Track".
+<img alt="Step 4 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/38716fc4-6221-421d-9873-719c4a0a9ae1/c440e279-8bba-470e-94d4-987bff914535.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.7583&amp;fp-y=0.7579&amp;fp-z=2.0654&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=766&amp;mark-y=553&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0zMzkmaD05NSZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+<h3 id="5-first-section">5. First section<a class="headerlink" href="#5-first-section" title="Permanent link">&para;</a></h3>
+<p>You now find all the riders of the group listed under each other. Enter your marks and comments for the first section.
+<img alt="Step 5 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/36b87e8a-8e28-4682-89f7-aa799e61ec65/3bfaa9ec-0370-4333-bf3c-83aa17e7e384.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.8798&amp;fp-y=0.3553&amp;fp-z=2.8451&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=560&amp;mark-y=371&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz00NTkmaD0xMjcmZml0PWNyb3AmY29ybmVyLXJhZGl1cz0xMA%3D%3D" /></p>
+<h3 id="6-change-section">6. Change section<a class="headerlink" href="#6-change-section" title="Permanent link">&para;</a></h3>
+<p>The sections are sorted in tabs. Click on the next tab to access the form for the next section.
+<img alt="Step 6 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/4a6d6295-9187-424a-94fa-0da13731970f/91885ffe-0617-45f2-b902-be9dd1a4426a.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3443&amp;fp-y=0.3796&amp;fp-z=1.4522&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=189&amp;mark-y=262&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0xODgmaD03MiZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+<h3 id="7-send-marks">7. Send marks<a class="headerlink" href="#7-send-marks" title="Permanent link">&para;</a></h3>
+<p>When the marks for all riders and all sections are complete, click on the lock icon.</p>
+<ul>
+<li>You can always see the marks of the other section and the total result of each rider under the comments field.
+<img alt="Step 7 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/484c1b50-04f3-4273-9c07-c8f7437bbb51/9ceb1f3b-31d3-4c68-b8d7-fd7aa2c4dc59.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=133&amp;mark-y=802&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz02MyZoPTYwJmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></li>
+</ul>
+<h3 id="8-confirm">8. Confirm<a class="headerlink" href="#8-confirm" title="Permanent link">&para;</a></h3>
+<p><img alt="Step 8 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/e4834012-46fa-48fe-b993-196e00a571e2/15ae0df8-dccf-4332-b766-7f50cfe53758.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;fp-z=2.0000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=-319&amp;mark-y=1068&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz05OCZoPTc2JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+<h3 id="9-total-results">9. Total results<a class="headerlink" href="#9-total-results" title="Permanent link">&para;</a></h3>
+<p>After locking a summary of the total results will be displayed. You can lock the marks and use this overview to show the results up to the speaker if that is desired at your competition.
+<img alt="Step 9 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/b5ce9627-202b-4e20-a96c-211cd7a23813/35975a6d-5d23-4624-a86f-39395d56afa4.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.5000&amp;fp-y=0.5000&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=-4&amp;mark-y=-4&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0xMjA4Jmg9ODc4JmZpdD1jcm9wJmNvcm5lci1yYWRpdXM9MTA%3D" /></p>
+<h3 id="10-next-group">10. Next group<a class="headerlink" href="#10-next-group" title="Permanent link">&para;</a></h3>
+<p>Click on the tab "Start list" to select the next group.
+<img alt="Step 10 screenshot" src="https://images.tango.us/workflows/0d8bf9af-c80a-45ba-99f3-23e93b093131/steps/976894c6-c3be-47b6-95e6-b35a2094707f/f7256565-d794-43fa-b725-2c16bf28ec85.png?crop=focalpoint&amp;fit=crop&amp;fp-x=0.3361&amp;fp-y=0.3319&amp;fp-z=1.4876&amp;w=1200&amp;border=2%2CF4F2F7&amp;border-radius=8%2C8%2C8%2C8&amp;border-radius-inner=8%2C8%2C8%2C8&amp;blend-align=bottom&amp;blend-mode=normal&amp;blend-x=0&amp;blend-w=1200&amp;blend64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL21hZGUtd2l0aC10YW5nby13YXRlcm1hcmstdjIucG5n&amp;mark-x=38&amp;mark-y=213&amp;m64=aHR0cHM6Ly9pbWFnZXMudGFuZ28udXMvc3RhdGljL2JsYW5rLnBuZz9tYXNrPWNvcm5lcnMmYm9yZGVyPTglMkNGRjc0NDImdz0xODImaD03NCZmaXQ9Y3JvcCZjb3JuZXItcmFkaXVzPTEw" /></p>
+<hr />
+<p><strong>Creation Date:</strong> April 27, 2023<br />
+<strong>Created By:</strong> Maxi Stapelfeldt<br />
+<a href="https://app.tango.us/app/workflow/0d8bf9af-c80a-45ba-99f3-23e93b093131?utm_source=markdown&amp;utm_medium=markdown&amp;utm_campaign=workflow%20export%20links">View most recent version on Tango.us</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
