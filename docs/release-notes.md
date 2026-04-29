@@ -1,5 +1,21 @@
 # Release Notes
 
+
+## IceTest-NG 2.35.1
+* [FIX]: Creating a new sponsor will now update the list of sponsors right away.
+
+## IceTest-NG 2.35.0
+* [NEW]: The "Cards" page now shows those riders who received already yellow or red cards by two or more judges in the current season. This way, you can easily identify riders who might be at risk of receiving a suspension if they receive another set of cards.
+
+## IceTest-NG 2.34.0
+* [FIX]: Preserve phase data like state when updating test catalogs.
+* [FIX]: Cards entered by judges themselves are now attributed to the correct section of the test.
+* [FIX]: Entering marks for Young Horse Evaluations (YHE) triggers publication to ticker and app when appropriate.
+* [FIX]: The horse selection modal for Young Horse Evaluations (YHE) reflects changes to a horse's score immediately.
+* [FIX]: Self-Checkin links can no longer change after the first time they are generated.
+* [NEW]: Exporting schedule data to Excel now includes columns for the number of starters, the groupsize, the time planned per group, the required number of groups, and the needed total time.
+* [UPDATE]: Temporarily removed support for assigning judges to specific sections of TR1-based tests. This will be reintroduced in a future release.
+
 ## IceTest-NG 2.33.0
 * [NEW]: Self-Checkin calculation now prioritizes participants whose horses had their passports checked successfully in the last 100 days.
 * [NEW]: The new menu item "Reports" - "Planned Starts" lets you view a list of horses that might have too many starts planned.
