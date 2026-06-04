@@ -1,5 +1,30 @@
 # Release Notes
 
+## IceTest-NG 2.37.1
+* [UPDATE]: Voice input for judges -- you can now create a competition-wide setting if you prefer to use the less accurate, but also less ressource-hungry Web Speech API instead of local speech recognition.
+
+## IceTest-NG 2.37.0
+* [NEW]: Judges can now use their voice to add comments, marks, and cards. Dictation is available in English, German, Danish, and Dutch.
+* [NEW]: Judges can now review their comments after a test / phase is completed.
+* [NEW]: Judges can now rank participants in secretary mode, if a test is configured to use ranking instead of points or time.
+* [UPDATE]: Stopwatch and timer controls stay visible on the new speaker screen all the time.
+* [UPDATE]: Section times on the new speaker screen are adjusted according to the current group's size.
+* [UPDATE]: Un-pausing a participant in pace races is less prone to cause resorting errors.
+* [FIX]: Sprint buttons in secretary mode (F1/F2/F3) do not get blocked any more.
+* [FIX]: Cards entered on the data center's marks entry page are properly cleared now after saving the participant's marks.
+
+## IceTest-NG 2.36.0
+* [NEW]: New speaker screen ready for testing via "2026" link from the old speaker screen. This new screen unifies the traditional speaker screen and the "Watch Incoming Marks" page. There are no video wall features yet.
+* [UPDATE]: The cards page is now showing all prebooked riders to national admins.
+* [FIX]: Prevent card buttons from acting as form submit buttons on the marks entry page.
+* [FIX]: The "Replacing a judge" popup lets you enter text again as expected.
+* [FIX]: Prevent accidental btn-card-Y activation from penalty-time input on the marks entry page.
+* [FIX]: Prevent the ticker site from swapping participant data between two competitions in very rare cases.
+* [FIX]: Unlocking start lists in tests with heats works as expected.
+
+## IceTest-NG 2.35.2
+* [FIX]: The popup showing the total score to the judge after sending marks now always appears as expected.
+* [FIX]: In finals, the ticker / app updates now the total score and rank after each section.
 
 ## IceTest-NG 2.35.1
 * [FIX]: Creating a new sponsor will now update the list of sponsors right away.
