@@ -18,6 +18,7 @@ The general structure of such a file is as follows:
       <name>Icelandic Combination</name>
       <description></description>
       <result_type>STA</result_type>
+      <blocks_required>2</blocks_required>
       <blocks>
         <block>
           <name>Tölt</name>
@@ -96,6 +97,7 @@ The following tags are valid inside a `<derived_result>` section:
 | `<description>` |A description of the Derived Result. May be empty. Required. | _&lt;description&gt;Tölt score and Gaited score combined.&lt;/description&gt;_ |
 | `<result_type>` |**STA** &#124; **TEAM**. Required.<br />STA: Results are calculated per participant.<br />TEAM: Results are calculated per team. | _&lt;result\_type&gt;STA&lt;/result\_type&gt;_ |
 | `<required_club>` |Limits the calculation to participants that are members of the club named here. Optional. | _&lt;required\_club&gt;Fákur&lt;/required\_club&gt;_ |
+| `<blocks_required>` |Number of blocks that will be used for the derived result to be calculated. Optional. | _&lt;blocks\_required&gt;2&lt;/blocks\_required&gt;_ |
 
 
 ### &lt;blocks&gt; section

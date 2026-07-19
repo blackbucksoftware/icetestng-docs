@@ -1,5 +1,24 @@
 # Release Notes
 
+## IceTest-NG 2.42.0
+* [NEW]: Add support for derived results where not all blocks are mandatory. This allows rankings where only "best x" blocks are counted.
+* [FIX]: "Optional" sections are always disregarded when left empty by the judge. This fixes a bug where an empty optional section could still be counted as a zero score.
+
+## IceTest-NG 2.41.1
+* [UPDATE]: Mailings to participants now require a reply-to address to be set.
+
+## IceTest-NG 2.41.0
+* [FIX]: In a final with exactly one rider, judgescould lock only the first section; sections 2..n stayed editable but never locked, so the final couldn't be completed.
+* [UPDATE]: Added a new default transcription engine to the voice input feature for judges which supports all FEIF languages. Improved UX for voice input.
+* [UPDATE]: Removed pre-defined comments from the judges' mark input page, since dictation is now available for all supported languages.
+* [UPDATE]: Speakers can add an optional 10s buffer countdown between auto-advanced sections. Useful for group tests with reign changes, where riders need a few seconds to get ready before the next section starts.
+* [FIX]: On the speaker screen (2026), riders who have "ELIM" status are no longer clogging the "Upcoming" list.
+* [UPDATE]: Improved the speed of several report queries.
+
+## IceTest-NG 2.38.0
+* [UPDATE]: Several improvements to the 2026 speaker screen.
+* [UPDATE]: Finetuning of the voice input feature for judges.
+
 ## IceTest-NG 2.37.1
 * [UPDATE]: Voice input for judges -- you can now create a competition-wide setting if you prefer to use the less accurate, but also less ressource-hungry Web Speech API instead of local speech recognition.
 
