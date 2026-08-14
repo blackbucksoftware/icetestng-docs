@@ -1,5 +1,12 @@
 # Release Notes
 
+## IceTest-NG 2.43.0
+* [UPDATE]: Handling of late withdraws in the UI. Users can choose whether or not to backfill the withdrawn slot.
+* [FIX]: Correctly order judges when one is deleted, then re-added to the list.
+* [FIX]: Activate the ticker for true finals if the PREL phase is not used due to a split test.
+* [FIX]: Reports - more - Number of Entries could return incorrect results in special cases.
+* [FIX]: Adding or removing tests manually could cause the sequential numbering of tests to start with values higher than 1 in some cases.
+
 ## IceTest-NG 2.42.0
 * [NEW]: Add support for derived results where not all blocks are mandatory. This allows rankings where only "best x" blocks are counted.
 * [FIX]: "Optional" sections are always disregarded when left empty by the judge. This fixes a bug where an empty optional section could still be counted as a zero score.
@@ -8,7 +15,7 @@
 * [UPDATE]: Mailings to participants now require a reply-to address to be set.
 
 ## IceTest-NG 2.41.0
-* [FIX]: In a final with exactly one rider, judgescould lock only the first section; sections 2..n stayed editable but never locked, so the final couldn't be completed.
+* [FIX]: In a final with exactly one rider, judges could lock only the first section; sections 2..n stayed editable but never locked, so the final couldn't be completed.
 * [UPDATE]: Added a new default transcription engine to the voice input feature for judges which supports all FEIF languages. Improved UX for voice input.
 * [UPDATE]: Removed pre-defined comments from the judges' mark input page, since dictation is now available for all supported languages.
 * [UPDATE]: Speakers can add an optional 10s buffer countdown between auto-advanced sections. Useful for group tests with reign changes, where riders need a few seconds to get ready before the next section starts.
