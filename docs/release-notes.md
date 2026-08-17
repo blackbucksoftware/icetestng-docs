@@ -1,11 +1,13 @@
 # Release Notes
 
 ## IceTest-NG 2.43.0
+* [UPDATE]: Let users pick the desired heat when setting phase states on heated tests.
 * [UPDATE]: Handling of late withdraws in the UI. Users can choose whether or not to backfill the withdrawn slot.
 * [FIX]: Correctly order judges when one is deleted, then re-added to the list.
 * [FIX]: Activate the ticker for true finals if the PREL phase is not used due to a split test.
 * [FIX]: Reports - more - Number of Entries could return incorrect results in special cases.
 * [FIX]: Adding or removing tests manually could cause the sequential numbering of tests to start with values higher than 1 in some cases.
+* [FIX]: Mailings no longer create duplicate records on save.
 
 ## IceTest-NG 2.42.0
 * [NEW]: Add support for derived results where not all blocks are mandatory. This allows rankings where only "best x" blocks are counted.
