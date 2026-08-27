@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns:data="x-schema:idSchema.xml"
+       xmlns:ref="x-schema:refSchema.xml"
+       xmlns="http://blackbuck.eu/icetestng">
+
+  <source>LOCAL</source>
+  <year>2023</year>
+  <revision>1</revision>
+
+  <derived_results></derived_results>
+
+  <tests>
+    <data:test id="XT1">
+      <testCode>XT1</testCode>
+      <testName>Eistöltpreis spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XT1" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XT1" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XT1" />
+        </phase>
+      </phases>
+    </data:test>
+
+    <data:test id="XT2">
+      <testCode>XT2</testCode>
+      <testName>Eistöltprüfung spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XT2" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XT2" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XT2" />
+        </phase>
+      </phases>
+    </data:test>
+
+    <data:test id="XT7">
+      <testCode>XT7</testCode>
+      <testName>Eistöltprüfung für Freizeitreiter spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XT7" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XT7" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XT7" />
+        </phase>
+      </phases>
+    </data:test>
+
+    <data:test id="XV1">
+      <testCode>XV1</testCode>
+      <testName>Eisviergangpreis spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XV1" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XV1" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XV1" />
+        </phase>
+      </phases>
+    </data:test>
+
+    <data:test id="XV5">
+      <testCode>XV5</testCode>
+      <testName>Eisviergangprüfung für Freizeitreiter spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XV5" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XV5" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XV5" />
+        </phase>
+      </phases>
+    </data:test>
+
+    <data:test id="XF1">
+      <testCode>XF1</testCode>
+      <testName>Eisfünfgangpreis spezial</testName>
+      <comments />
+      <qualification>Extra</qualification>
+      <worldRanking>false</worldRanking>
+      <heats>none</heats>
+      <finalists>7</finalists>
+      <phases>
+        <phase>
+          <name>PREL</name>
+          <ref:phase_def ref="THREE_RIDER_PREL" />
+        </phase>
+        <phase>
+          <name>BFIN</name>
+          <ref:phase_def ref="XF1" />
+        </phase>
+        <phase>
+          <name>AFIN</name>
+          <ref:phase_def ref="XF1" />
+        </phase>
+        <phase>
+          <name>SECR</name>
+          <ref:phase_def ref="XF1" />
+        </phase>
+      </phases>
+    </data:test>
+  </tests>
+
+  <phase_defs>
+    <data:phase_def id="XT1">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+              <name>Langsamer Tölt</name>
+              <description>Langsamer Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Tempoverstärken</name>
+              <description>Tempoverstärken</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Beliebiges Tempo Tölt</name>
+              <description>Beliebiges Tempo Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+    <data:phase_def id="XT2">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+              <name>Beliebiges Tempo Tölt</name>
+              <description>Beliebiges Tempo Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Ruhiges Tempo Tölt</name>
+              <description>Ruhiges Tempo Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Zügelüberstreichen</name>
+              <description>Zügelüberstreichen</description>
+              <factor>2.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+    <data:phase_def id="XT7">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+          <name>Langsames Tempo Tölt</name>
+          <description>Langsames Tempo Tölt</description>
+          <factor>1.0</factor>
+          <canDrop>false</canDrop>
+        </section>
+        <section>
+          <name>Beliebiges Tempo Tölt</name>
+          <description>Beliebiges Tempo Tölt</description>
+          <factor>1.0</factor>
+          <canDrop>false</canDrop>
+        </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+    <data:phase_def id="XV1">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+              <name>Langsamer Tölt</name>
+              <description>Langsamer Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Trab</name>
+              <description>Trab</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Mittlerer bis schneller Tölt</name>
+              <description>Mittlerer bis schneller Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+    <data:phase_def id="XV5">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+              <name>Langsamer Tölt</name>
+              <description>Langsamer Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Trab</name>
+              <description>Trab</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Beliebiges Tempo Tölt</name>
+              <description>Beliebiges Tempo Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+    <data:phase_def id="XF1">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <section>
+              <name>Tölt</name>
+              <description>Tölt</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Trab</name>
+              <description>Trab</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+            <section>
+              <name>Rennpass</name>
+              <description>Rennpass</description>
+              <factor>1.0</factor>
+              <canDrop>false</canDrop>
+            </section>
+      </sections>
+      <judges>
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+        <ref:judge ref="oval" />
+      </judges>
+    </data:phase_def>
+
+
+    <data:phase_def id="THREE_RIDER_PREL">
+      <reinChoice>false</reinChoice>
+      <groupSize>4</groupSize>
+      <dropSections/>
+      <ref:result ref="normal"/>
+      <sections>
+        <ref:section ref="preliminary"/>
+      </sections>
+      <judges>
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+        <ref:judge ref="ovalPreliminary" />
+      </judges>
+    </data:phase_def>
+  </phase_defs>
+
+  <sections>
+    <data:section id="preliminary">
+      <name>Preliminary</name>
+      <description>Old-style preliminary round where judges calculate the marks on the track.</description>
+      <factor>1.0</factor>
+      <canDrop>false</canDrop>
+    </data:section>
+  </sections>
+
+  <results>
+    <data:result id="normal">
+      <type>Mark</type>
+      <decimals>2</decimals>
+      <min>0</min>
+      <max>10</max>
+    </data:result>
+
+    <data:result id="time">
+      <type>Time</type>
+      <decimals>2</decimals>
+      <min/>
+      <max/>
+    </data:result>
+  </results>
+
+  <judges>
+    <data:judge id="oval">
+      <type>Mark</type>
+      <mark>
+        <min>0</min>
+        <max>10</max>
+        <step>0.5</step>
+      </mark>
+      <time/>
+      <cards>
+        <card>
+          <color>red</color>
+        </card>
+        <card>
+          <color>yellow</color>
+        </card>
+        <card>
+          <color>blue</color>
+        </card>
+      </cards>
+      <flags />
+    </data:judge>
+
+    <data:judge id="ovalPreliminary">
+      <type>Mark</type>
+      <mark>
+        <min>0</min>
+        <max>10</max>
+        <step>0.1</step>
+      </mark>
+      <time/>
+      <cards>
+        <card>
+          <color>red</color>
+        </card>
+        <card>
+          <color>yellow</color>
+        </card>
+        <card>
+          <color>blue</color>
+        </card>
+       </cards>
+      <flags />
+    </data:judge>
+  </judges>
+
+  <conversions></conversions>
+</rules>
