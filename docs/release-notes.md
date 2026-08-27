@@ -1,5 +1,11 @@
 # Release Notes
 
+## IceTest-NG 2.44.0
+* [NEW]: Add support for tests with droppable sections in secretary mode, where only the best x sections are counted for the final score. Affects mainly X.3a4 and X.3a5 tests.
+* [NEW]: Let users merge the entries of two (identical) tests into one.
+* [UPDATE]: Improve dictation for judges by adding equestrian terms to the dictionary.
+* [UPDATE]: Improve the speed of several report queries.
+
 ## IceTest-NG 2.43.0
 * [UPDATE]: Let users pick the desired heat when setting phase states on heated tests.
 * [UPDATE]: Handling of late withdraws in the UI. Users can choose whether or not to backfill the withdrawn slot.
