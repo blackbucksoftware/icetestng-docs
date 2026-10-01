@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/tutorial-extras/translate-your-site/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Translate your site - IceTest-NG</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Translate your site";
+        var mkdocs_page_input_path = "tutorial-extras/translate-your-site.md";
+        var mkdocs_page_url = "/icetestng-docs/tutorial-extras/translate-your-site/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../custom-rankings-samples/">Examples</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Translate your site</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/tutorial-extras/translate-your-site.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="translate-your-site">Translate your site<a class="headerlink" href="#translate-your-site" title="Permanent link">&para;</a></h1>
+<p>Let's translate <code>docs/intro.md</code> to French.</p>
+<h2 id="configure-i18n">Configure i18n<a class="headerlink" href="#configure-i18n" title="Permanent link">&para;</a></h2>
+<p>Modify <code>docusaurus.config.js</code> to add support for the <code>fr</code> locale:</p>
+<p>```js title="docusaurus.config.js"
+module.exports = {
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+  },
+};</p>
+<div class="codehilite"><pre><span></span><code>## Translate a doc
+
+Copy the `docs/intro.md` file to the `i18n/fr` folder:
+
+```bash
+mkdir -p i18n/fr/docusaurus-plugin-content-docs/current/
+
+cp docs/intro.md i18n/fr/docusaurus-plugin-content-docs/current/intro.md
+</code></pre></div>
+
+<p>Translate <code>i18n/fr/docusaurus-plugin-content-docs/current/intro.md</code> in French.</p>
+<h2 id="start-your-localized-site">Start your localized site<a class="headerlink" href="#start-your-localized-site" title="Permanent link">&para;</a></h2>
+<p>Start your site on the French locale:</p>
+<div class="codehilite"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>start<span class="w"> </span>--<span class="w"> </span>--locale<span class="w"> </span>fr
+</code></pre></div>
+
+<p>Your localized site is accessible at <a href="http://localhost:3000/fr/">http://localhost:3000/fr/</a> and the <code>Getting Started</code> page is translated.</p>
+<p>:::caution</p>
+<p>In development, you can only use one locale at a same time.</p>
+<p>:::</p>
+<h2 id="add-a-locale-dropdown">Add a Locale Dropdown<a class="headerlink" href="#add-a-locale-dropdown" title="Permanent link">&para;</a></h2>
+<p>To navigate seamlessly across languages, add a locale dropdown.</p>
+<p>Modify the <code>docusaurus.config.js</code> file:</p>
+<p>```js title="docusaurus.config.js"
+module.exports = {
+  themeConfig: {
+    navbar: {
+      items: [
+        // highlight-start
+        {
+          type: 'localeDropdown',
+        },
+        // highlight-end
+      ],
+    },
+  },
+};</p>
+<div class="codehilite"><pre><span></span><code><span class="n">The</span><span class="w"> </span><span class="n">locale</span><span class="w"> </span><span class="n">dropdown</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">appears</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">navbar</span><span class="o">:</span>
+
+<span class="o">!</span><span class="p">[</span><span class="n">Locale</span><span class="w"> </span><span class="n">Dropdown</span><span class="p">](.</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="n">localeDropdown</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+
+<span class="cp">## Build your localized site</span>
+
+<span class="n">Build</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">site</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">specific</span><span class="w"> </span><span class="n">locale</span><span class="o">:</span>
+
+<span class="err">```</span><span class="n">bash</span>
+<span class="n">npm</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">--</span><span class="w"> </span><span class="o">--</span><span class="n">locale</span><span class="w"> </span><span class="n">fr</span>
+</code></pre></div>
+
+<p>Or build your site to include all the locales at once:</p>
+<div class="codehilite"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>build
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

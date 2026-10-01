@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Blackbuck Software" /><link rel="canonical" href="https://blackbucksoftware.github.io/icetestng-docs/custom-rankings-samples/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Examples - IceTest-NG</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Examples";
+        var mkdocs_page_input_path = "custom-rankings-samples.md";
+        var mkdocs_page_url = "/icetestng-docs/custom-rankings-samples/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> IceTest-NG
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../import-csv/">Import from Excel</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../tutorial-judges/">Tutorial for Judges</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Derived Results</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings/">Overall Rankings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../custom-rankings-xml/">Build your own</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Examples</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#kreismeister-aka-county-champion">Kreismeister aka County Champion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#one-ranking-for-all">One Ranking for All</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Tools</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../equipment-check-app/">Equipment Check App</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">About</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Release Notes</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">IceTest-NG</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Derived Results</li>
+      <li class="breadcrumb-item active">Examples</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/blackbucksoftware/icetestng-docs/edit/main/docs/custom-rankings-samples.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="custom-derived-results-examples">Custom Derived Results: Examples<a class="headerlink" href="#custom-derived-results-examples" title="Permanent link">&para;</a></h1>
+<h2 id="kreismeister-aka-county-champion">Kreismeister aka County Champion<a class="headerlink" href="#kreismeister-aka-county-champion" title="Permanent link">&para;</a></h2>
+<p>Let's start with a ranking that uses results from three blocks (tölt, gaited tests, and a third block featuring dressage, trail, and pace disciplines). It's being used at a club championship event in Roderath (Germany). Side note: This event takes place at the exact venue where the very first European Championships were held.</p>
+<p>While all blocks are counting equally, the tests within each block have different factors, for example T1 results are multiplied by 0.85, while T7 scores are only multiplied by 0.4.</p>
+<p>Riders must ride at least one test from each block, and the best result from each block is used to calculate the final score. </p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--</span>
+<span class="cm">  Note: This is only an excerpt, not the full file.</span>
+<span class="cm">  You can download the complete file below.</span>
+<span class="cm">!--&gt;</span>
+<span class="nt">&lt;derived_result&gt;</span>
+<span class="w">  </span><span class="nt">&lt;resultcode&gt;</span>KR.1<span class="nt">&lt;/resultcode&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>Kreismeister<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;description&gt;&lt;/description&gt;</span>
+<span class="w">  </span><span class="nt">&lt;result_type&gt;</span>STA<span class="nt">&lt;/result_type&gt;</span>
+<span class="w">  </span><span class="nt">&lt;blocks&gt;</span>
+<span class="w">    </span><span class="nt">&lt;block&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>Tölt<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">      </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">      </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">      </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.85<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.85<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T4<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T3<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.6<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T6<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.6<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.T7<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.4<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">    </span><span class="nt">&lt;block&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>Gang<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">      </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">      </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">      </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.V1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.85<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.F1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.85<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.V2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.F2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.V3<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.6<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.V5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.4<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">    </span><span class="nt">&lt;block&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>Nebenplatz<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">      </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">      </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">      </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.D3<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.D4<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.D5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.6<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.D6<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.4<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.TR1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.4<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.PP1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.8<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">        </span><span class="nt">&lt;test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;testcode&gt;</span>%.P2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">          </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/blocks&gt;</span>
+<span class="nt">&lt;/derived_result&gt;</span>
+</code></pre></div>
+
+<p>You can download the full XML file here: <a href="../xml/roderath2022.xml">roderath2022.xml</a>.</p>
+<h2 id="one-ranking-for-all">One Ranking for All<a class="headerlink" href="#one-ranking-for-all" title="Permanent link">&para;</a></h2>
+<p>This example is very similar to the first one: It has three blocks of tests and riders are required to take part in each block to get ranked. </p>
+<p>However, there is one difference: Some tests are listed more than once, for example T8 shows up as K.M.T8 and %.C.T8. This is done to allow for the tests to have different factors: K.M.T8 is multiplied by 1, while %.C.T8 is multiplied by 0.7. The reason? K.M.T8 is a childrens' class test, while %.C.T8 is a test for adults. The organizer decided to have everybody in one ranking, but wanted to boost the scores of the children a bit to make it more fair.</p>
+<div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--</span>
+<span class="cm">  Note: This is only an excerpt, not the full file.</span>
+<span class="cm">  You can download the complete file below.</span>
+<span class="cm">!--&gt;</span>
+<span class="nt">&lt;derived_result&gt;</span>
+<span class="w">      </span><span class="nt">&lt;resultcode&gt;</span>TS<span class="nt">&lt;/resultcode&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;</span>Turniersiegerwertung<span class="nt">&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;description&gt;&lt;/description&gt;</span>
+<span class="w">      </span><span class="nt">&lt;result_type&gt;</span>STA<span class="nt">&lt;/result_type&gt;</span>
+<span class="w">      </span><span class="nt">&lt;blocks&gt;</span>
+<span class="w">        </span><span class="nt">&lt;block&gt;</span>
+<span class="w">          </span><span class="nt">&lt;name&gt;</span>Gruppe<span class="w"> </span>1<span class="nt">&lt;/name&gt;</span>
+<span class="w">          </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">          </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">          </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>K.M.T8<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>K.L.T7<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%C.T8<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%A.T7<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.T6<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.T3<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.T4<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">        </span><span class="nt">&lt;block&gt;</span>
+<span class="w">          </span><span class="nt">&lt;name&gt;</span>Gruppe<span class="w"> </span>2<span class="nt">&lt;/name&gt;</span>
+<span class="w">          </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">          </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">          </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>K.M.V6<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>K.L.V5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%C.V5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%E.V5<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>0.7<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.V3<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.V2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.F2<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>PREL<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">        </span><span class="nt">&lt;block&gt;</span>
+<span class="w">          </span><span class="nt">&lt;name&gt;</span>Gruppe<span class="w"> </span>3<span class="nt">&lt;/name&gt;</span>
+<span class="w">          </span><span class="nt">&lt;required&gt;</span>one<span class="nt">&lt;/required&gt;</span>
+<span class="w">          </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">          </span><span class="nt">&lt;marks&gt;</span>1<span class="nt">&lt;/marks&gt;</span>
+<span class="w">          </span><span class="nt">&lt;tests&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>K.M.D8<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.D6<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.TR1<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">            </span><span class="nt">&lt;test&gt;</span>
+<span class="w">              </span><span class="nt">&lt;testcode&gt;</span>%.D4<span class="nt">&lt;/testcode&gt;</span>
+<span class="w">              </span><span class="nt">&lt;phase&gt;</span>FIN<span class="nt">&lt;/phase&gt;</span>
+<span class="w">              </span><span class="nt">&lt;factor&gt;</span>1<span class="nt">&lt;/factor&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/test&gt;</span>
+<span class="w">          </span><span class="nt">&lt;/tests&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/block&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/blocks&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/derived_result&gt;</span>
+</code></pre></div>
+
+<p>You can download the full XML file here: <a href="../xml/meppen2023.xml">meppen2023.xml</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../custom-rankings-xml/" class="btn btn-neutral float-left" title="Build your own"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../equipment-check-app/" class="btn btn-neutral float-right" title="Equipment Check App">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/blackbucksoftware/icetestng-docs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../custom-rankings-xml/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../equipment-check-app/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
