@@ -1,5 +1,11 @@
 # Release Notes
 
+## IceTest-NG 2.46.0
+* [NEW]: Show awards on the 2026 speaker screen.
+* [NEW]: Show the expected start times on the 2026 speaker screen if grouptime has been set.
+* [FIX]: Printing multiple start lists at once no longer causes errors.
+
+
 ## IceTest-NG 2.44.0
 * [NEW]: Add support for tests with droppable sections in secretary mode, where only the best x sections are counted for the final score. Affects mainly X.3a4 and X.3a5 tests.
 * [NEW]: Let users merge the entries of two (identical) tests into one.
